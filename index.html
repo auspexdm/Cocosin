@@ -46,13 +46,18 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .35s,box
 header.solid{background:rgba(251,250,245,.94);backdrop-filter:blur(12px);box-shadow:0 8px 30px -18px rgba(32,36,28,.35);padding:10px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{height:52px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.15))}
-.brand .b-name{font-family:var(--serif);font-size:22px;letter-spacing:.02em;color:var(--ink)}
-.brand .b-name em{font-style:normal;color:var(--palm)}
+.brand img{height:52px;width:auto;background:#fff;border-radius:12px;padding:5px;box-shadow:0 4px 14px -6px rgba(0,0,0,.35)}
+.brand .b-name{font-family:var(--serif);font-size:22px;letter-spacing:.02em;color:#fff;transition:color .35s}
+.brand .b-name em{font-style:normal;color:var(--lime)}
 .navlinks{display:flex;gap:6px;align-items:center;list-style:none}
-.navlinks a{padding:10px 14px;border-radius:99px;font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--ink-2);transition:.25s}
-.navlinks a:hover{background:var(--lime-soft);color:var(--palm)}
-.navlinks a.active{background:var(--ink);color:#fff}
+.navlinks a{padding:10px 14px;border-radius:99px;font-size:14px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);transition:.25s}
+.navlinks a:hover{background:rgba(255,255,255,.14);color:#fff}
+.navlinks a.active{background:var(--lime);color:var(--ink)}
+header.solid .b-name{color:var(--ink)}
+header.solid .b-name em{color:var(--palm)}
+header.solid .navlinks a{color:var(--ink-2)}
+header.solid .navlinks a:hover{background:var(--lime-soft);color:var(--palm)}
+header.solid .navlinks a.active{background:var(--ink);color:#fff}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:99px;background:var(--lime);color:var(--ink);font-weight:700;font-size:14px;letter-spacing:.06em;border:none;cursor:pointer;transition:.28s;box-shadow:0 10px 26px -12px rgba(140,198,62,.8)}
 .btn:hover{background:var(--palm);color:#fff;transform:translateY(-2px)}
 .btn.ghost{background:transparent;border:1.6px solid rgba(255,255,255,.65);color:#fff;box-shadow:none}
