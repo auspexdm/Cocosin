@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coco's Inn Resort — Coastal Comfort Near Kashid Beach | Alibaug</title>
+<meta name="description" content="Coco's Inn Resort by Spicy Mango — coastal comfort with a touch of luxury just 4 km from Kashid Beach, Alibaug. Sea view rooms, infinity pool, Kokani dining, events & weddings.">
+<link rel="icon" href="https://cocosinn.com/wp-content/uploads/2024/07/cropped-Untitled_design__75_-removebg-preview-1-270x270.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#8CC63E;          /* logo palm green */
+  --lime-soft:#eaf5da;
+  --palm:#44691f;          /* deep palm green */
+  --ink:#20241c;           /* logo charcoal */
+  --ink-2:#3a4033;
+  --ivory:#FBFAF5;
+  --sand:#EFEAdD;
+  --sand-2:#e4dcc9;
+  --gold:#C2A25E;
+  --white:#ffffff;
+  --shadow:0 18px 50px -18px rgba(32,36,28,.28);
+  --radius:18px;
+  --max:1180px;
+  --serif:'Marcellus',Georgia,serif;
+  --sans:'Mulish',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--palm);text-decoration:none}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.15;color:var(--ink)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ---------- eyebrow + swoosh signature ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--palm)}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--lime);border-radius:2px}
+.swoosh{width:74px;height:16px;margin-top:14px}
+.swoosh path{stroke:var(--lime);stroke-width:3.4;fill:none;stroke-linecap:round}
+
+/* ---------- nav ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .35s,box-shadow .35s,padding .35s;padding:18px 0}
+header.solid{background:rgba(251,250,245,.94);backdrop-filter:blur(12px);box-shadow:0 8px 30px -18px rgba(32,36,28,.35);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:52px;width:auto;background:#fff;border-radius:12px;padding:5px;box-shadow:0 4px 14px -6px rgba(0,0,0,.35)}
+.brand .b-name{font-family:var(--serif);font-size:22px;letter-spacing:.02em;color:#fff;transition:color .35s}
+.brand .b-name em{font-style:normal;color:var(--lime)}
+.navlinks{display:flex;gap:6px;align-items:center;list-style:none}
+.navlinks a{padding:10px 14px;border-radius:99px;font-size:14px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);transition:.25s}
+.navlinks a:hover{background:rgba(255,255,255,.14);color:#fff}
+.navlinks a.active{background:var(--lime);color:var(--ink)}
+header.solid .b-name{color:var(--ink)}
+header.solid .b-name em{color:var(--palm)}
+header.solid .navlinks a{color:var(--ink-2)}
+header.solid .navlinks a:hover{background:var(--lime-soft);color:var(--palm)}
+header.solid .navlinks a.active{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:99px;background:var(--lime);color:var(--ink);font-weight:700;font-size:14px;letter-spacing:.06em;border:none;cursor:pointer;transition:.28s;box-shadow:0 10px 26px -12px rgba(140,198,62,.8)}
+.btn:hover{background:var(--palm);color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:1.6px solid rgba(255,255,255,.65);color:#fff;box-shadow:none}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.btn.dark{background:var(--ink);color:#fff;box-shadow:none}
+.btn.dark:hover{background:var(--palm)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:2.5px;background:#fff;margin:6px 0;border-radius:3px;transition:.3s}
+header.solid .burger span{background:var(--ink)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(32,36,28,.97);z-index:70;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:#fff;font-family:var(--serif);font-size:30px;padding:10px}
+.mobile-menu .close-m{position:absolute;top:26px;right:28px;color:#fff;font-size:34px;background:none;border:none;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#fff;overflow:hidden;
+ background:linear-gradient(160deg,#20241c 0%,#2e3d22 45%,#44691f 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:
+ radial-gradient(1100px 500px at 85% 110%,rgba(140,198,62,.38),transparent 60%),
+ radial-gradient(700px 400px at 8% -10%,rgba(194,162,94,.25),transparent 60%)}
+.hero .palm-mark{position:absolute;right:-60px;bottom:-40px;width:min(46vw,520px);opacity:.14;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:90px}
+.hero .eyebrow{color:var(--lime)}
+.hero h1{color:#fff;font-size:clamp(2.4rem,5.6vw,4.4rem);max-width:16ch;margin:18px 0 8px}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p.sub{max-width:56ch;color:rgba(255,255,255,.85);font-size:1.06rem;margin:14px 0 34px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.media-tag{position:absolute;left:24px;bottom:24px;z-index:3;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);border:1px dashed rgba(255,255,255,.35);border-radius:8px;padding:6px 12px}
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid rgba(255,255,255,.5);border-radius:20px}
+.scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:9px;margin-left:-2px;border-radius:4px;background:var(--lime);animation:drop 1.8s infinite}
+@keyframes drop{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+.hero-stats{display:flex;gap:38px;margin-top:52px;flex-wrap:wrap}
+.hero-stats div b{font-family:var(--serif);font-size:1.9rem;color:var(--lime);display:block;font-weight:400}
+.hero-stats div span{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+
+/* ---------- sections ---------- */
+section.block{padding:96px 0}
+section.block.tint{background:var(--sand)}
+section.block.dark{background:var(--ink);color:#e9e7de}
+section.block.dark h2,section.block.dark h3{color:#fff}
+.sec-head{max-width:720px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:14px}
+.sec-head p{color:var(--ink-2);margin-top:14px}
+.grid{display:grid;gap:28px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+/* ---------- cards & photos ---------- */
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .35s}
+.card:hover{transform:translateY(-6px)}
+.card .body{padding:26px 26px 30px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card h3{font-size:1.45rem}
+.card .tagline{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.photo{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sand-2)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.card:hover .photo img,.tile:hover img{transform:scale(1.06)}
+.ph{position:relative;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:20px;
+ background:linear-gradient(140deg,var(--sand) 0%,var(--sand-2) 60%,#dcd3ba 100%);color:#8a7f63}
+.ph svg{width:42px;height:42px;opacity:.8}
+.ph b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.ph small{font-size:11.5px;max-width:26ch;line-height:1.5;border:1px dashed #b9ad8d;border-radius:8px;padding:4px 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:12px;font-weight:600;background:var(--lime-soft);color:var(--palm);border-radius:99px;padding:6px 13px}
+.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:16px;border-top:1px solid #eee}
+.price-row .price{font-family:var(--serif);font-size:1.15rem;color:var(--palm)}
+.price-row .price small{font-family:var(--sans);color:#98917d;font-size:11px;display:block;letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- gallery ---------- */
+.masonry{columns:3;column-gap:20px}
+.masonry .tile{break-inside:avoid;margin-bottom:20px;border-radius:14px;overflow:hidden;cursor:zoom-in;box-shadow:var(--shadow)}
+.masonry img{width:100%;transition:transform .7s}
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(20,23,17,.94);display:none;align-items:center;justify-content:center;padding:32px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(92vw,1100px);max-height:86vh;border-radius:12px}
+.lightbox button{position:absolute;top:22px;right:26px;font-size:34px;color:#fff;background:none;border:none;cursor:pointer}
+
+/* ---------- amenities ---------- */
+.amen{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.amen .a{background:#fff;border-radius:14px;padding:26px 22px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start}
+.amen .a svg{flex:0 0 34px;width:34px;height:34px;stroke:var(--palm)}
+.amen .a b{font-family:var(--serif);font-weight:400;font-size:1.08rem;display:block}
+.amen .a p{font-size:13.5px;color:var(--ink-2);margin-top:4px}
+
+/* ---------- testimonials ---------- */
+.t-band{display:flex;align-items:center;gap:18px;margin-bottom:40px;flex-wrap:wrap}
+.t-band .score{font-family:var(--serif);font-size:2.6rem;color:var(--lime)}
+.t-band .stars{color:var(--gold);letter-spacing:3px;font-size:18px}
+.t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.t-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px}
+.t-card p{font-size:15px;color:#d9d7cc}
+.t-card .who{display:flex;align-items:center;gap:12px;margin-top:18px}
+.t-card .av{width:42px;height:42px;border-radius:50%;background:var(--lime);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800}
+.t-card .who b{color:#fff;font-weight:700;font-size:14px;display:block}
+.t-card .who span{font-size:12px;color:#9aa08d}
+
+/* ---------- dining menu ---------- */
+.dish{display:flex;gap:16px;padding:20px 0;border-bottom:1px dashed var(--sand-2)}
+.dish:last-child{border:none}
+.dish .dot{flex:0 0 10px;width:10px;height:10px;border-radius:50%;background:var(--lime);margin-top:10px}
+.dish b{font-family:var(--serif);font-weight:400;font-size:1.12rem}
+.dish p{font-size:14.5px;color:var(--ink-2)}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+
+/* ---------- forms ---------- */
+.form-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:40px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.field input,.field select,.field textarea{padding:14px 16px;border:1.5px solid var(--sand-2);border-radius:10px;font-family:var(--sans);font-size:15px;background:var(--ivory);transition:.25s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 4px var(--lime-soft)}
+.form-note{font-size:12.5px;color:#98917d;margin-top:14px}
+.ok-msg{display:none;background:var(--lime-soft);color:var(--palm);font-weight:700;border-radius:10px;padding:14px 18px;margin-top:16px}
+
+/* ---------- contact ---------- */
+.c-info{display:flex;flex-direction:column;gap:22px}
+.c-info .row{display:flex;gap:16px;align-items:flex-start}
+.c-info .row svg{flex:0 0 26px;width:26px;height:26px;stroke:var(--lime)}
+.c-info b{font-family:var(--serif);font-weight:400;font-size:1.1rem;display:block}
+.map-frame{border:0;width:100%;height:420px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.socials{display:flex;gap:12px}
+.socials a{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;transition:.25s;font-weight:700;font-size:13px}
+.socials a:hover{background:var(--lime);color:var(--ink)}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#c9ccbd;padding:70px 0 30px}
+footer h4{color:#fff;font-size:1.05rem;margin-bottom:16px;letter-spacing:.04em}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:40px}
+footer a{color:#c9ccbd;font-size:14.5px}
+footer a:hover{color:var(--lime)}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:#8b9080}
+.f-logo{height:64px;margin-bottom:14px;background:#fff;border-radius:12px;padding:6px}
+
+/* ---------- page banner ---------- */
+.banner{position:relative;padding:170px 0 90px;color:#fff;background:linear-gradient(150deg,#20241c,#3a5720 90%)}
+.banner::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 380px at 90% 120%,rgba(140,198,62,.35),transparent 65%)}
+.banner .wrap{position:relative;z-index:2}
+.banner h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3.4rem);max-width:22ch;margin-top:16px}
+.banner h1 em{font-style:normal;color:var(--lime)}
+.banner p{max-width:64ch;color:rgba(255,255,255,.82);margin-top:16px}
+.crumb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);font-weight:700}
+
+/* ---------- floating whatsapp ---------- */
+.wa{position:fixed;right:22px;bottom:22px;z-index:55;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -10px rgba(37,211,102,.7);transition:.3s}
+.wa:hover{transform:translateY(-4px) scale(1.05)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.scroll-hint::after{animation:none}}
+
+/* ---------- how to reach ---------- */
+.route-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column;gap:10px}
+.route-card .ic{width:52px;height:52px;border-radius:14px;background:var(--lime-soft);display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.route-card .ic svg{width:28px;height:28px;stroke:var(--palm);fill:none;stroke-width:1.6}
+.route-card h3{font-size:1.3rem}
+.route-card p{font-size:14.5px;color:var(--ink-2)}
+.route-card .eta{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.d-table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.d-table th{background:var(--ink);color:#fff;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;text-align:left;padding:16px 20px}
+.d-table td{padding:16px 20px;border-bottom:1px solid var(--sand);font-size:15px;vertical-align:middle}
+.d-table tr:last-child td{border-bottom:none}
+.d-table td b{font-family:var(--serif);font-weight:400;font-size:1.05rem}
+.d-table .dist{color:var(--palm);font-weight:700;white-space:nowrap}
+.dir-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;background:var(--lime-soft);color:var(--palm);padding:8px 16px;border-radius:99px;transition:.25s;white-space:nowrap}
+.dir-link:hover{background:var(--lime);color:var(--ink)}
+.dir-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+@media(max-width:1150px){.navlinks a{padding:9px 10px;font-size:13px}}
+@media(max-width:900px){.d-table th:nth-child(3),.d-table td:nth-child(3){display:none}}
+@media(max-width:640px){.d-table td,.d-table th{padding:12px 12px;font-size:13.5px}}
+
+/* ---------- pages (router) ---------- */
+.page{display:none}
+.page.current{display:block}
+
+@media(max-width:1020px){
+ .g3,.g4,.amen{grid-template-columns:repeat(2,1fr)}
+ .masonry{columns:2}
+ .split{grid-template-columns:1fr;gap:36px}
+ .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+ .navlinks,.nav .btn{display:none}
+ .burger{display:block}
+ .g2,.g3,.g4,.amen,.t-grid,.form-grid{grid-template-columns:1fr}
+ .masonry{columns:1}
+ section.block{padding:64px 0}
+ .hero{min-height:86vh}
+ .f-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#/home" class="brand">
+      <img src="https://cocosinn.com/wp-content/uploads/2024/07/cropped-Untitled_design__75_-removebg-preview-1-270x270.png" alt="Coco's Inn Resort logo">
+      <span class="b-name">Coco's <em>Inn</em></span>
+    </a>
+    <ul class="navlinks">
+      <li><a href="#/home" data-nav="home">Home</a></li>
+      <li><a href="#/rooms" data-nav="rooms">Our Rooms</a></li>
+      <li><a href="#/dining" data-nav="dining">Dining</a></li>
+      <li><a href="#/events" data-nav="events">Events</a></li>
+      <li><a href="#/things" data-nav="things">Things To Do</a></li>
+      <li><a href="#/reach" data-nav="reach">How to Reach</a></li>
+      <li><a href="#/about" data-nav="about">About Us</a></li>
+      <li><a href="#/contact" data-nav="contact">Contact</a></li>
+    </ul>
+    <a class="btn" href="#/contact">Book Now</a>
+    <button class="burger" aria-label="Open menu" onclick="document.getElementById('mm').classList.add('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mm" aria-label="Mobile navigation">
+  <button class="close-m" aria-label="Close menu" onclick="document.getElementById('mm').classList.remove('open')">&times;</button>
+  <a href="#/home">Home</a><a href="#/rooms">Our Rooms</a><a href="#/dining">Dining</a>
+  <a href="#/events">Events</a><a href="#/things">Things To Do</a><a href="#/reach">How to Reach</a><a href="#/about">About Us</a><a href="#/contact">Contact</a>
+  <a class="btn" style="margin-top:18px" href="#/contact">Book Now</a>
+</nav>
+
+<!-- ============================ HOME ============================ -->
+<main>
+<div class="page" id="pg-home">
+
+  <section class="hero">
+    <svg class="palm-mark" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 195V95M100 95C70 70 40 68 15 82c35-28 66-24 85 5M100 95c30-25 60-27 85-13-35-28-66-24-85 5M100 95C88 60 92 32 112 12 82 26 76 60 96 90M100 95c12-35 8-63-12-83 30 14 36 48 16 78" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
+    <div class="wrap">
+      <span class="eyebrow rv">Kashid Beach · Alibaug · Maharashtra</span>
+      <h1 class="rv">Welcome to Coco's Inn — where <em>comfort</em> meets convenience.</h1>
+      <svg class="swoosh rv" viewBox="0 0 74 16" aria-hidden="true"><path d="M2 12C20 2 54 2 72 12"/></svg>
+      <p class="sub rv">Coastal comfort with a touch of luxury, just 4 km from the breathtaking Kashid Beach. A serene seaside retreat where value meets indulgence — and every stay feels like a hidden gem.</p>
+      <div class="cta-row rv">
+        <a class="btn" href="#/contact">Book Now</a>
+        <a class="btn ghost" href="#/rooms">Explore Rooms</a>
+      </div>
+      <div class="hero-stats rv">
+        <div><b>4 km</b><span>From Kashid Beach</span></div>
+        <div><b>675+</b><span>Google Reviews</span></div>
+        <div><b>5</b><span>Room Categories</span></div>
+        <div><b>∞</b><span>Infinity Pool</span></div>
+      </div>
+    </div>
+    <span class="media-tag">Hero video / drone footage drops in here — v2</span>
+    <div class="scroll-hint" aria-hidden="true"></div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split">
+      <div class="rv">
+        <span class="eyebrow">Why Choose Coco's Inn?</span>
+        <h2 style="font-size:clamp(1.9rem,3.2vw,2.7rem);margin-top:14px">Coastal comfort with a touch of luxury near Kashid Beach</h2>
+        <svg class="swoosh" viewBox="0 0 74 16" aria-hidden="true"><path d="M2 12C20 2 54 2 72 12"/></svg>
+        <p style="margin-top:18px">At <b>Coco's Inn</b>, we believe great hospitality doesn't have to come at a high price. Just 4 km from the breathtaking <b>Kashid Beach</b>, our serene seaside retreat offers travelers a smart alternative to crowded, overpriced resorts — without sacrificing style, comfort, or charm.</p>
+        <p style="margin-top:14px">Wake up to refreshing sea views, unwind by the pool, or stroll through our expansive green lawn as the ocean breeze drifts by. Thoughtfully designed rooms blend modern elegance with the warmth of home, creating the perfect space to relax after a day of sun and sand.</p>
+        <p style="margin-top:14px">Whether you're here for work, a weekend escape, or a peaceful family getaway, <b>Coco's Inn</b> invites you to experience the beauty of Kashid in comfort and style.</p>
+      </div>
+      <div class="rv">
+        <div class="ph" style="aspect-ratio:4/4.6;border-radius:var(--radius);box-shadow:var(--shadow)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+          <b>Resort exterior · Pool · Lawn</b>
+          <small>Replace with hero photo from current site gallery</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Discover</span>
+        <h2>Everything a coastal escape should be</h2>
+      </div>
+      <div class="grid g3">
+        <a class="card rv" href="#/rooms">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M3 18h18M6 10V7a2 2 0 012-2h8a2 2 0 012 2v3"/></svg><b>Rooms photo</b><small>From current site — Our Rooms gallery</small></div>
+          <div class="body"><span class="tagline">Our Rooms</span><h3>Get ready to live, for unlimited living</h3><p>Five sea-view and garden-view room categories, from premium AC rooms to family stays.</p></div>
+        </a>
+        <a class="card rv" href="#/things">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3M12 21a6 6 0 006-6H6a6 6 0 006 6z"/></svg><b>Kashid Beach photo</b><small>From current site — Things To Do</small></div>
+          <div class="body"><span class="tagline">Things To Do</span><h3>Let's go everywhere</h3><p>Kashid Beach water sports, Murud-Janjira Fort, lighthouses, temples and wildlife trails.</p></div>
+        </a>
+        <a class="card rv" href="#/dining">
+          <div class="photo"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/33-1024x683.jpg" alt="Dining at Coco's Inn"></div>
+          <div class="body"><span class="tagline">Dining</span><h3>Discover the difference</h3><p>Authentic Kokani coastal cuisine plus multicuisine veg & non-veg favourites, by the sea.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Amenities</span>
+        <h2>Facilities designed around your stay</h2>
+      </div>
+      <div class="amen">
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M2 17c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M2 21c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M7 13V6a3 3 0 016 0M13 13V6"/></svg><div><b>Infinity & Kids Pool</b><p>A stunning pool overlooking the greens — plus a safe splash zone for the little ones.</p></div></div>
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 3h16M6 3v7a6 6 0 0012 0V3M12 16v5M8 21h8"/></svg><div><b>Multicuisine Restaurant</b><p>Fresh, locally sourced seafood, coastal flavours and Indian & Chinese veg / non-veg.</p></div></div>
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 20c3-6 7-9 9-9s6 3 9 9M12 11V4M9 6l3-2 3 2"/></svg><div><b>Water Sports Nearby</b><p>Jet ski, parasailing, banana & bumper rides, motor boat and beach ATV — 5 min away at Kashid.</p></div></div>
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9L9.5 8z"/></svg><div><b>Lawn, Games & Bonfire</b><p>Expansive green lawn, indoor & outdoor games, nature walks, bonfires and poolside dining.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block dark">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow" style="color:var(--lime)">Guest Love</span>
+        <h2>Rated EXCELLENT by our guests</h2>
+      </div>
+      <div class="t-band rv">
+        <span class="score">EXCELLENT</span>
+        <div><div class="stars">★★★★★</div><span style="font-size:13px;color:#9aa08d">Based on 675+ Google reviews</span></div>
+      </div>
+      <div class="t-grid">
+        <div class="t-card rv"><p>"Awesome place to stay… calm with a beautiful view of the sea, close to the beach. Pool is clean, nice non-veg food, wonderful and fast service. Rooms and bedsheets were clean, with a mini fridge."</p><div class="who"><span class="av">A</span><div><b>Ashutosh Banerjee</b><span>Google review · Sep 2024</span></div></div></div>
+        <div class="t-card rv"><p>"A great experience from check-in to check-out — everything is brilliant, especially the view. Staff is very helpful and proactive in understanding guests' needs. Thank you for your hospitality."</p><div class="who"><span class="av">T</span><div><b>Trishala Ninave</b><span>Google review · Sep 2024</span></div></div></div>
+        <div class="t-card rv"><p>"Very nice and so beautiful 😍 — we loved this place 💕"</p><div class="who"><span class="av">M</span><div><b>Meenu Nehwal</b><span>Google review · Aug 2024</span></div></div></div>
+        <div class="t-card rv"><p>"Excellent service, room arrangements, natural beauty."</p><div class="who"><span class="av">R</span><div><b>Rajesh Kulkarni</b><span>Google review · Aug 2024</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap split">
+      <div class="rv">
+        <span class="eyebrow">Reserve Your Escape</span>
+        <h2 style="margin-top:14px">Make a reservation</h2>
+        <p style="margin-top:14px">Tell us when you'd like to visit and our team will get back to you with availability for your dates.</p>
+        <div style="margin-top:26px;display:flex;flex-direction:column;gap:10px">
+          <a href="tel:+919167562668" style="font-family:var(--serif);font-size:1.25rem;color:var(--ink)">📞 +91 91675 62668</a>
+          <a href="tel:+919167562468" style="font-family:var(--serif);font-size:1.25rem;color:var(--ink)">📞 +91 91675 62468</a>
+        </div>
+      </div>
+      <div class="rv"><div class="form-card">
+        <div class="form-grid">
+          <div class="field"><label for="h-name">Name *</label><input id="h-name" type="text" placeholder="Your full name"></div>
+          <div class="field"><label for="h-email">Email *</label><input id="h-email" type="email" placeholder="you@email.com"></div>
+          <div class="field"><label for="h-phone">Phone Number *</label><input id="h-phone" type="tel" placeholder="+91"></div>
+          <div class="field"><label for="h-date">Check-In Date *</label><input id="h-date" type="date"></div>
+        </div>
+        <button class="btn dark" style="margin-top:22px;width:100%;justify-content:center" onclick="fakeSubmit(this)">Submit Enquiry</button>
+        <div class="ok-msg">Thank you! Your enquiry has been noted — our team will contact you shortly.</div>
+        <p class="form-note">Draft note: form will be wired to WPForms / email on the live build.</p>
+      </div></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============================ ROOMS ============================ -->
+<div class="page" id="pg-rooms">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · Our Rooms</span>
+      <h1>Unwind in our coastal retreat — the perfect blend of <em>luxury, comfort & serenity</em></h1>
+      <p>Coco's Inn Resort by Spicy Mango is a picturesque coastal retreat in Alibaug, offering luxury, relaxation and natural beauty with panoramic ocean views. Enjoy our infinity pool, multicuisine restaurant and activities from water sports to nature walks — perfect for family getaways, romantic escapes and special events.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap grid g2" style="gap:34px">
+
+      <div class="card rv">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 11 photos</b><small>Sea View Premium AC — insert from current site</small></div>
+        <div class="body">
+          <span class="tagline">Open the door for a spacious living</span>
+          <h3>Sea View Premium AC Room</h3>
+          <p>Nestled near the serene pool area, this room offers a blend of relaxation and luxury with a plush king-size bed, private bathroom and efficient air conditioning. Step outside to a tranquil private garden, with a peaceful temple nearby for a unique spiritual retreat — plus easy access to the pool.</p>
+          <div class="chips"><span>King bed</span><span>AC</span><span>Flat-screen TV</span><span>Mini fridge</span><span>Tea/coffee maker</span><span>Free Wi-Fi</span><span>Private garden</span></div>
+          <div class="price-row"><div class="price">₹ —,———<small>per night · to be added</small></div><a class="btn" href="#/contact">Book Now</a></div>
+        </div>
+      </div>
+
+      <div class="card rv">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 9 photos</b><small>Garden View Family — insert from current site</small></div>
+        <div class="body">
+          <span class="tagline">Get ready to live for unlimited living</span>
+          <h3>Premium Garden View Family Room</h3>
+          <p>Situated near the lush garden area, this spacious family room features a cozy queen-size bed plus a comfortable single bed, close to the kids' play area and a short walk from the pool. Enjoy the swimming pool, kids pool, in-house restaurant, balcony room service, garden and lawn, indoor games and more.</p>
+          <div class="chips"><span>Queen + single bed</span><span>AC</span><span>Flat-screen TV</span><span>Mini fridge</span><span>Electric kettle</span><span>Hair dryer</span><span>Intercom</span><span>Free Wi-Fi</span></div>
+          <div class="price-row"><div class="price">₹ —,———<small>per night · to be added</small></div><a class="btn" href="#/contact">Book Now</a></div>
+        </div>
+      </div>
+
+      <div class="card rv">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 5 photos</b><small>Standard Sea View — insert from current site</small></div>
+        <div class="body">
+          <span class="tagline">Open the door for a spacious living</span>
+          <h3>Standard Sea View Room</h3>
+          <p>A tranquil twin retreat with a picturesque garden setting and modern amenities — ideal for friends or family. Guests can enjoy the beautiful garden just outside, with the pools, in-house restaurant, balcony room service, lawn and indoor games all close at hand.</p>
+          <div class="chips"><span>Twin beds</span><span>AC</span><span>Flat-screen TV</span><span>Mini fridge</span><span>Tea/coffee maker</span><span>Hair dryer</span><span>Intercom</span><span>Free Wi-Fi</span></div>
+          <div class="price-row"><div class="price">₹ —,———<small>per night · to be added</small></div><a class="btn" href="#/contact">Book Now</a></div>
+        </div>
+      </div>
+
+      <div class="card rv">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 9 photos</b><small>Sea View Balcony — insert from current site</small></div>
+        <div class="body">
+          <span class="tagline">Open the door for a spacious living</span>
+          <h3>Sea View Balcony Room</h3>
+          <p>Wake up to the sea from your own balcony. Comfortable beds, a private bathroom and full modern amenities make this a favourite — with the garden, pools, restaurant and indoor games moments away for a relaxed, easy stay.</p>
+          <div class="chips"><span>Sea-view balcony</span><span>AC</span><span>Flat-screen TV</span><span>Mini fridge</span><span>Electric kettle</span><span>Intercom</span><span>Free Wi-Fi</span></div>
+          <div class="price-row"><div class="price">₹ —,———<small>per night · to be added</small></div><a class="btn" href="#/contact">Book Now</a></div>
+        </div>
+      </div>
+
+      <div class="card rv" style="grid-column:1/-1">
+        <div class="body" style="display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:center">
+          <div class="ph" style="border-radius:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 7 photos</b><small>NON AC Sea View — insert from current site</small></div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span class="tagline">Open the door for a spacious living</span>
+            <h3>NON AC Sea View Room</h3>
+            <p>Our value sea-view stay with the same warm hospitality — comfortable beds, private bathroom, TV, mini fridge, tea/coffee maker and Wi-Fi, cooled by the natural coastal breeze. Full access to the pools, restaurant, lawn and games.</p>
+            <div class="chips"><span>Sea view</span><span>Fan-cooled</span><span>Flat-screen TV</span><span>Mini fridge</span><span>Tea/coffee maker</span><span>Free Wi-Fi</span></div>
+            <div class="price-row"><div class="price">₹ —,———<small>per night · to be added</small></div><a class="btn" href="#/contact">Book Now</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap" style="text-align:center">
+      <h2 class="rv">Ready for your coastal escape?</h2>
+      <p class="rv" style="max-width:52ch;margin:14px auto 28px">Check availability for your dates — call us or send a reservation enquiry.</p>
+      <a class="btn rv" href="#/contact">Make a Reservation</a>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ DINING ============================ -->
+<div class="page" id="pg-dining">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · Dining</span>
+      <h1>Experience Coco's Inn — cultured in <em>hospitality, relaxation & luxury</em></h1>
+      <p>Nestled in the serene coastal beauty of Alibag, our resort is not just a place to stay, but a destination for culinary exploration. Dining is an integral part of the travel experience — a diverse range of flavours reflecting the rich cultural tapestry of the region.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split">
+      <div class="rv">
+        <span class="eyebrow">Our Kitchens</span>
+        <h2 style="margin-top:14px">From beachside romance to poolside family meals</h2>
+        <svg class="swoosh" viewBox="0 0 74 16" aria-hidden="true"><path d="M2 12C20 2 54 2 72 12"/></svg>
+        <p style="margin-top:18px">Our dining venues cater to every taste — from traditional local cuisine to international favourites. Whether you're indulging in a romantic dinner by the beach, a casual family meal by the pool, or a gourmet feast at our main restaurant, each dish is crafted with care and passion.</p>
+        <p style="margin-top:14px">Our chefs use the freshest ingredients, many sourced locally, so every bite is a testament to quality and authenticity.</p>
+        <a class="btn dark" style="margin-top:26px" href="#/contact">Reserve a Table</a>
+      </div>
+      <div class="grid g2 rv" style="gap:16px">
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/33-1024x683.jpg" alt="Restaurant at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/42-1-1024x668.jpg" alt="Dining ambience"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/34-1024x683.jpg" alt="Food at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/43-1024x668.jpg" alt="Coastal dining"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap split">
+      <div class="rv">
+        <span class="eyebrow">Signature Cuisine</span>
+        <h2 style="margin-top:14px">Kokani Delights</h2>
+        <p style="margin-top:16px">We take pride in offering an authentic taste of the Konkan coast. Kokani cuisine is known for its bold flavours, fresh ingredients and unique combinations — one of India's most beloved regional cuisines, mastered by our chefs.</p>
+        <div style="margin-top:22px;background:#fff;border-radius:var(--radius);padding:14px 28px;box-shadow:var(--shadow)">
+          <div class="dish"><span class="dot"></span><div><b>Kokani Fish Curry</b><p>A spicy, tangy curry made with the freshest catch, cooked in a flavourful coconut gravy with traditional spices.</p></div></div>
+          <div class="dish"><span class="dot"></span><div><b>Chicken Sukka</b><p>A dry chicken dish with grated coconut, aromatic spices and a hint of kokum for a distinctive taste.</p></div></div>
+          <div class="dish"><span class="dot"></span><div><b>Sol Kadhi</b><p>A refreshing, cooling drink of coconut milk and kokum — perfect after a spicy meal.</p></div></div>
+          <div class="dish"><span class="dot"></span><div><b>Bombil Fry</b><p>Crispy fried Bombay duck, marinated in spices — crunchy texture, burst of flavour.</p></div></div>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="grid" style="gap:16px">
+          <div class="photo" style="aspect-ratio:16/10;border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/images-_3_-1.jpg" alt="Kokani fish delicacy"></div>
+          <div class="grid g2" style="gap:16px">
+            <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/download-_6_-1.jpg" alt="Coastal delicacy"></div>
+            <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/download-_7_-1-1.jpg" alt="Konkan cuisine"></div>
+          </div>
+        </div>
+        <p style="margin-top:20px;font-size:15px"><b>Local ingredients:</b> the coastal region of Alibag provides an abundance of fresh seafood, coconuts and tropical fruits — all integral to Kokani cuisine. Our dishes are a celebration of these local flavours, offering a true taste of the region.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block dark">
+    <div class="wrap" style="text-align:center">
+      <h2 class="rv" style="font-size:clamp(1.8rem,3.4vw,2.7rem)">Kokani fish & coastal delicacies</h2>
+      <p class="rv" style="max-width:56ch;margin:16px auto 30px;color:#c9ccbd">Fresh from the Arabian Sea to your table. Reserve for lunch or dinner during your stay.</p>
+      <a class="btn rv" href="#/contact">Make a Reservation</a>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ EVENTS ============================ -->
+<div class="page" id="pg-events">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · Events</span>
+      <h1>"Plan, celebrate and cherish — discover <em>events</em> at Coco's Inn"</h1>
+      <p>At Coco's Inn Resort, we specialize in creating the perfect blend of work and leisure. Whether you're hosting a high-powered business conference, a team-building retreat or a casual offsite gathering, our serene coastal location provides the ideal backdrop — every detail designed to inspire, connect and energize.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split">
+      <div class="rv">
+        <span class="eyebrow">Corporate Event</span>
+        <h2 style="margin-top:14px">Meetings & conferences by the sea</h2>
+        <p style="font-style:italic;color:var(--gold);margin-top:10px">Experience the magic of sun, sand and sea.</p>
+        <p style="margin-top:16px">Transform your corporate gatherings into exceptional experiences. From strategic business meetings to grand conferences, we provide the perfect setting with state-of-the-art facilities, tailored event services and a serene coastal ambiance. Our professional team ensures every detail is seamlessly handled, allowing you to focus on your goals while leaving a lasting impression on your guests.</p>
+      </div>
+      <div class="grid g2 rv" style="gap:16px">
+        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 1</b><small>Corporate event gallery · current site</small></div>
+        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 2</b><small>Corporate event gallery · current site</small></div>
+        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 3</b><small>Corporate event gallery · current site</small></div>
+        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 4</b><small>Corporate event gallery · current site</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap split">
+      <div class="grid g3 rv" style="gap:14px;order:1">
+        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 1</b></div>
+        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 2</b></div>
+        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 3</b></div>
+        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 4</b></div>
+        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 5</b></div>
+        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 6</b></div>
+      </div>
+      <div class="rv" style="order:2">
+        <span class="eyebrow">Corporate Activity</span>
+        <h2 style="margin-top:14px">Team-building on the coast</h2>
+        <p style="margin-top:16px">Unleash the potential of your team with thoughtfully designed corporate activities — beachside team-building games, adventure activities and interactive workshops, curated to inspire, connect and energize your workforce in a fun and productive environment.</p>
+        <div class="chips" style="margin-top:18px"><span>Beachside games</span><span>Adventure activities</span><span>Interactive workshops</span><span>Offsite retreats</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head rv" style="text-align:center;margin:0 auto 44px">
+        <span class="eyebrow" style="justify-content:center">Weddings</span>
+        <h2>"Celebrate love, elegance and every little detail — only at Coco's Inn"</h2>
+        <p>From intimate gatherings to grand celebrations, we bring your wedding vision to life. Beautiful spaces, exceptional service and a touch of magic make your big day unforgettable — memories that last a lifetime.</p>
+      </div>
+      <div class="grid g3">
+        <div class="ph rv" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.4-9.5 9-9.5 9z"/></svg><b>Wedding gallery 1</b><small>Insert wedding photos from current site</small></div>
+        <div class="ph rv" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.4-9.5 9-9.5 9z"/></svg><b>Wedding gallery 2</b><small>Insert wedding photos from current site</small></div>
+        <div class="ph rv" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.4-9.5 9-9.5 9z"/></svg><b>Wedding gallery 3</b><small>Insert wedding photos from current site</small></div>
+      </div>
+      <div style="text-align:center;margin-top:40px"><a class="btn rv" href="#/contact">Plan Your Event</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ THINGS TO DO ============================ -->
+<div class="page" id="pg-things">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · Things To Do</span>
+      <h1>More closer to <em>paradise</em></h1>
+      <p>Nestled in the serene coastal village of Barshiv, Coco's Inn Resort by Spicy Mango offers more than just luxury and relaxation — it's a gateway to unforgettable experiences. From the sun-kissed shores of Kashid Beach to the historical wonders of Murud-Janjira Fort, immerse yourself in the perfect blend of adventure, culture and nature.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap grid g2" style="gap:30px">
+      <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 18c3-1.5 5-1.5 8 0s5 1.5 8 0M12 12V4M8 7l4-3 4 3"/></svg><b>Kashid Beach</b><small>Insert photos from current site</small></div>
+        <div class="body"><span class="tagline">Experience the magic of sun, sand and sea</span><h3>Explore Kashid Beach — just minutes away</h3><p>The perfect blend of serenity and adventure. Relax on the soft sands or indulge in thrilling water sports like jet-skiing and parasailing — a must-visit gem for every guest.</p></div></div>
+      <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 21V10l4-3 4 3 4-3 4 3v11M4 21h16M9 21v-5h6v5"/></svg><b>Murud-Janjira Fort</b><small>Insert photos from current site</small></div>
+        <div class="body"><span class="tagline">Step into the past — an unconquered legacy</span><h3>Historical charm at Murud-Janjira Fort</h3><p>A short drive away, this island fort is famous for remaining unconquered despite several invasion attempts. The scenic boat ride adds a layer of adventure to your historical exploration.</p></div></div>
+      <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20l6-9 4 5 3-4 5 8H3z"/></svg><b>Korli Fort</b><small>Insert photos from current site</small></div>
+        <div class="body"><span class="tagline">Panoramic views of the Arabian Sea</span><h3>Korli Fort</h3><p>Perched on the cliffs, this lesser-known gem offers sweeping sea views. Its ruins speak of an ancient past, while the peaceful surroundings make it a favourite for history lovers and trekking enthusiasts alike.</p></div></div>
+      <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 21h4M9 21l1.5-14h3L15 21M8 7h8M12 3v4M6 11l-2 2M18 11l2 2"/></svg><b>Korli Lighthouse</b><small>Insert photos from current site</small></div>
+        <div class="body"><span class="tagline">A beacon on the horizon</span><h3>Korli Lighthouse</h3><p>Standing tall near Korli Fort, this iconic structure has guided sailors for centuries — now a vantage point for sweeping coastline views, perfect for photographers and breeze-seekers.</p></div></div>
+      <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 6v12H5V9l7-6zM9 21v-6h6v6M12 3v4"/></svg><b>Birla Mandir</b><small>Insert photos from current site</small></div>
+        <div class="body"><span class="tagline">Spiritual solace on a hill</span><h3>Birla Mandir</h3><p>A beautiful marble temple dedicated to Lord Ganesh, perched with breathtaking sea views — known for its peaceful ambiance, immaculate architecture and landscaped gardens.</p></div></div>
+      <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20V8l5-4 5 4M14 20V10l6 4v6M4 20h16"/></svg><b>Revdanda Fort</b><small>Insert photos from current site</small></div>
+        <div class="body"><span class="tagline">History wrapped in nature</span><h3>Revdanda Fort</h3><p>Once a Portuguese stronghold, now in peaceful ruins overgrown with lush vegetation — an intriguing blend of history and nature with picturesque ocean views and hidden corners to explore.</p></div></div>
+      <div class="card rv" style="grid-column:1/-1"><div class="body" style="display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:center">
+        <div class="ph" style="border-radius:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c-4 0-7-3-7-7 0-5 7-11 7-11s7 6 7 11c0 4-3 7-7 7zM12 21v-8"/></svg><b>Phansad Sanctuary</b><small>Insert photos from current site</small></div>
+        <div style="display:flex;flex-direction:column;gap:12px"><span class="tagline">Reconnect with nature</span><h3>Phansad Wildlife Sanctuary</h3><p>Immerse yourself in rich biodiversity — a refuge for countless species of flora and fauna across dense forests. A paradise for birdwatchers, nature lovers and wildlife photographers, whether hiking the trails or simply soaking in the calm.</p></div>
+      </div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ ABOUT ============================ -->
+<div class="page" id="pg-about">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · About Us</span>
+      <h1>Your coastal haven of <em>comfort & serenity</em></h1>
+      <p>Nestled along the pristine shoreline of Alibaug, Coco's Inn Resort by Spicy Mango offers a perfect blend of luxury, relaxation and natural beauty — panoramic ocean views, modern amenities and unparalleled hospitality for family getaways, romantic escapes and special events.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split">
+      <div class="rv">
+        <span class="eyebrow">About Coco's Inn Resort by Spicy Mango</span>
+        <h2 style="margin-top:14px">Get ready to live, for unlimited living</h2>
+        <svg class="swoosh" viewBox="0 0 74 16" aria-hidden="true"><path d="M2 12C20 2 54 2 72 12"/></svg>
+        <p style="margin-top:18px">Coco's Inn Resort is a picturesque coastal retreat nestled along the shoreline of Alibaug, boasting panoramic views of the sparkling ocean waters. It's conveniently located within easy reach of popular tourist attractions, yet secluded enough to provide a peaceful escape from the hustle and bustle of city life.</p>
+        <p style="margin-top:14px">The resort offers a variety of accommodation options to suit every traveler's preference, including spacious oceanfront rooms with balcony. Each room is elegantly furnished and equipped with modern amenities, ensuring a comfortable stay.</p>
+        <p style="margin-top:14px">Guests can embark on nature walks, enjoy bonfires and poolside dining, play indoor and outdoor games with family, or simply relax with a book on the sandy shores.</p>
+      </div>
+      <div class="rv grid" style="gap:16px">
+        <div class="ph" style="aspect-ratio:16/9;border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Resort overview photo</b><small>From current site — About gallery (7 images)</small></div>
+        <div class="grid g2" style="gap:16px">
+          <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Pool photo</b></div>
+          <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Lawn photo</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">Facilities & Services</span><h2>Designed to enhance every stay</h2></div>
+      <div class="amen">
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M2 17c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M2 21c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M7 13V6a3 3 0 016 0M13 13V6"/></svg><div><b>Infinity Pool & Kids Pool</b><p>A stunning infinity pool overlooking the ocean — perfect for soaking up the sun and refreshing dips.</p></div></div>
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 3h16M6 3v7a6 6 0 0012 0V3M12 16v5M8 21h8"/></svg><div><b>Multicuisine Restaurant</b><p>Seafood by the sea, coastal flavours, and a variety of veg / non-veg Indian and Chinese preparations.</p></div></div>
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 20c3-6 7-9 9-9s6 3 9 9M12 11V4M9 6l3-2 3 2"/></svg><div><b>Water Sports at Kashid</b><p>Jet skiing, parasailing, banana boat, bumper ride, motor boat and beach ATV — a 5-minute drive away.</p></div></div>
+        <div class="a rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9L9.5 8z"/></svg><div><b>Leisure & Activities</b><p>Nature walks, bonfires, poolside dining, indoor & outdoor games — or a quiet book on the shore.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block dark">
+    <div class="wrap">
+      <div class="t-band rv"><span class="score">EXCELLENT</span><div><div class="stars">★★★★★</div><span style="font-size:13px;color:#9aa08d">Based on 675+ Google reviews</span></div></div>
+      <div class="t-grid">
+        <div class="t-card rv"><p>"Awesome place to stay… beautiful view of the sea, clean pool, tasty non-veg food, awesome staff and fast service."</p><div class="who"><span class="av">A</span><div><b>Ashutosh Banerjee</b><span>Google review</span></div></div></div>
+        <div class="t-card rv"><p>"Brilliant from check-in to check-out, especially the view. Very good customer management — thank you for your hospitality."</p><div class="who"><span class="av">T</span><div><b>Trishala Ninave</b><span>Google review</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap" style="text-align:center;max-width:840px">
+      <h2 class="rv">Open the door for a spacious living</h2>
+      <p class="rv" style="margin:18px 0 30px">We hope you will visit Coco's Inn Resort by Spicy Mango — where every moment is crafted to create unforgettable memories. We look forward to serving you and making your weekend pleasant with your family and friends. Experience the best of Alibaug at Coco's Inn Resort.</p>
+      <a class="btn rv" href="#/contact">Plan Your Stay</a>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ HOW TO REACH ============================ -->
+<div class="page" id="pg-reach">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · How to Reach</span>
+      <h1>Getting here is part of the <em>journey</em></h1>
+      <p>Coco's Inn Resort sits in the coastal village of Barshiv, just 4 km from Kashid Beach on the Alibaug–Murud coastal road. Reach us by road, ferry, rail or air — and let Google Maps guide you door to door.</p>
+      <div class="cta-row" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Coco%27s+Inn+Resort+Kashid+Barshiv">Get Directions from My Location</a>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Coco%27s+Inn+Resort+Kashid+Barshiv">Open in Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Ways to Reach</span>
+        <h2>By road, sea, rail or air</h2>
+        <p>All distances and travel times below are approximate — please verify current ferry and train timings before travelling, especially during monsoon season.</p>
+      </div>
+      <div class="grid g2">
+        <div class="route-card rv">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-6A2 2 0 018.4 8.5h7.2a2 2 0 011.9 1.5L19 16M5 16h14M5 16v3h2v-2h10v2h2v-3M8 12.5h8"/></svg></div>
+          <span class="eta">Approx. 130–140 km · 3.5–4 hrs from Mumbai</span>
+          <h3>By Road from Mumbai</h3>
+          <p>Take the Mumbai–Goa Highway (NH-66) via Panvel and Wadkhal, then follow the Alibaug–Revdanda–Kashid coastal road to Barshiv. The final stretch along the coast is one of the most scenic drives in Maharashtra.</p>
+          <a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Mumbai&destination=Coco%27s+Inn+Resort+Kashid+Barshiv"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Route from Mumbai</a>
+        </div>
+        <div class="route-card rv">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-6A2 2 0 018.4 8.5h7.2a2 2 0 011.9 1.5L19 16M5 16h14M5 16v3h2v-2h10v2h2v-3M8 12.5h8"/></svg></div>
+          <span class="eta">Approx. 170–180 km · 4–4.5 hrs from Pune</span>
+          <h3>By Road from Pune</h3>
+          <p>Drive via the Mumbai–Pune Expressway to Khopoli and onward through Pen–Alibaug, or take the lush Tamhini Ghat route via Mangaon and Roha for a greener drive down to the coast.</p>
+          <a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Pune&destination=Coco%27s+Inn+Resort+Kashid+Barshiv"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Route from Pune</a>
+        </div>
+        <div class="route-card rv">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 18c3-1.5 5-1.5 9 0s6 1.5 9 0M4 15l1-5h14l1 5M12 10V6M8 6h8"/></svg></div>
+          <span class="eta">Ferry ~1 hr + scenic 1.5–2 hr drive</span>
+          <h3>By Ferry via Mandwa (the fun way)</h3>
+          <p>Hop on the RoRo car ferry from Bhaucha Dhakka (Ferry Wharf, Mumbai) or a speedboat from the Gateway of India to Mandwa Jetty, then drive down the coast via Alibaug and Revdanda to the resort. Ferry schedules vary by season — check before you sail.</p>
+          <a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Mandwa+Jetty&destination=Coco%27s+Inn+Resort+Kashid+Barshiv"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Route from Mandwa Jetty</a>
+        </div>
+        <div class="route-card rv">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 15V6a3 3 0 013-3h6a3 3 0 013 3v9M6 15h12M6 15l-2 4M18 15l2 4M9 19h6M9 7h6"/></svg></div>
+          <span class="eta">Roha ~45 km · Pen ~70 km (approx.)</span>
+          <h3>By Train</h3>
+          <p>The nearest railheads are Roha on the Konkan Railway and Pen on the Panvel line. From either station, taxis and local transport connect to Kashid and Barshiv. We can help arrange a pickup — just call ahead.</p>
+          <a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Roha+Railway+Station&destination=Coco%27s+Inn+Resort+Kashid+Barshiv"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Route from Roha Station</a>
+        </div>
+        <div class="route-card rv" style="grid-column:1/-1">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M10.5 13.5L3 11l1.5-1.5L11 10l4.5-4.5a1.8 1.8 0 012.5 2.5L13.5 12l.5 6.5L12.5 20l-2.5-7.5L7 15l.5 2.5L6 19l-1.5-3L1.5 14.5 3 13l2.5.5z"/></svg></div>
+          <span class="eta">Mumbai CSMIA ~140 km · Navi Mumbai Intl. (NMIA) ~110 km (approx.)</span>
+          <h3>By Air</h3>
+          <p>Fly into Chhatrapati Shivaji Maharaj International Airport (Mumbai) or the new Navi Mumbai International Airport, then continue by road via Panvel and the Alibaug coastal route — or combine with the Mandwa ferry from South Mumbai for a memorable arrival by sea.</p>
+          <a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Navi+Mumbai+International+Airport&destination=Coco%27s+Inn+Resort+Kashid+Barshiv"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Route from NMIA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Places Nearby</span>
+        <h2>Distances from Coco's Inn</h2>
+        <p>Tap "Directions" on any destination to open turn-by-turn navigation in Google Maps, starting from the resort.</p>
+      </div>
+      <table class="d-table rv">
+        <thead><tr><th>Destination</th><th>Approx. Distance</th><th>Good For</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><b>Kashid Beach</b></td><td class="dist">~4 km</td><td>Sun, sand & water sports</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Kashid+Beach"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Phansad Wildlife Sanctuary</b></td><td class="dist">~10 km</td><td>Trails, birding & nature</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Phansad+Wildlife+Sanctuary"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Murud-Janjira Fort</b></td><td class="dist">~15 km</td><td>History & boat ride</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Murud+Janjira+Fort"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Korlai Fort & Lighthouse</b></td><td class="dist">~15 km</td><td>Sea views & trekking</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Korlai+Fort"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Revdanda Fort & Beach</b></td><td class="dist">~20 km</td><td>Portuguese ruins in nature</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Revdanda+Fort"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Birla Mandir, Salav</b></td><td class="dist">~22 km</td><td>Marble temple & sea views</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Birla+Mandir+Salav"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Nagaon Beach</b></td><td class="dist">~28 km</td><td>Water sports & shacks</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Nagaon+Beach+Alibaug"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Alibaug Town & Kolaba Fort</b></td><td class="dist">~32 km</td><td>Markets, food & sea fort</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Alibaug"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+          <tr><td><b>Mandwa Jetty</b></td><td class="dist">~50 km</td><td>Ferry point to Mumbai</td><td><a class="dir-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Coco%27s+Inn+Resort+Kashid+Barshiv&destination=Mandwa+Jetty"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Directions</a></td></tr>
+        </tbody>
+      </table>
+      <p class="form-note rv" style="margin-top:14px">Distances are approximate road distances from the resort and may vary by route.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split" style="align-items:start">
+      <div class="rv">
+        <span class="eyebrow">Locate Us</span>
+        <h2 style="margin-top:14px">Coco's Inn on the map</h2>
+        <p style="margin-top:16px"><b>Coco's Inn Resort</b><br>Barshive, Nr. Kashid Beach, Tal. Murud,<br>Dist. Raigad 402202, Maharashtra.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:18px">
+          <a href="tel:+919167562668" style="font-family:var(--serif);font-size:1.15rem;color:var(--ink)">📞 +91 91675 62668</a>
+          <a href="tel:+919167562468" style="font-family:var(--serif);font-size:1.15rem;color:var(--ink)">📞 +91 91675 62468</a>
+        </div>
+        <div class="cta-row" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+          <a class="btn dark" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Coco%27s+Inn+Resort+Kashid+Barshiv">Navigate Now</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://wa.me/919167562668?text=Hi%20Coco%27s%20Inn%2C%20I%20need%20help%20with%20directions%20%2F%20pickup.">WhatsApp for Pickup Help</a>
+        </div>
+        <div style="margin-top:28px;background:var(--sand);border-radius:14px;padding:20px 22px">
+          <b style="font-family:var(--serif);font-weight:400">Travel tips</b>
+          <p style="font-size:14px;margin-top:8px">• The coastal road via Revdanda is the most scenic approach.<br>• Ferry services from Mumbai may pause during heavy monsoon — check schedules in June–September.<br>• Fuel up at Alibaug or Revdanda; pumps are sparse on the final stretch.<br>• Arriving late? Call us and we'll guide you in over the phone.</p>
+        </div>
+      </div>
+      <div class="rv">
+        <iframe class="map-frame" style="height:520px" loading="lazy" title="Coco's Inn Resort location on Google Maps" src="https://maps.google.com/maps?q=Coco%27s%20Inn%20Resort%20Kashid&t=m&z=13&output=embed&iwloc=near"></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ CONTACT ============================ -->
+<div class="page" id="pg-contact">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · Contact</span>
+      <h1>We'd love to <em>host you</em></h1>
+      <p>Coco's Inn Resort · Barshive, Nr. Kashid Beach, Tal. Murud, Dist. Raigad 402202, Maharashtra.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split" style="align-items:start">
+      <div class="c-info rv">
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21c-4 0-8-5.6-8-10a8 8 0 1116 0c0 4.4-4 10-8 10z"/><circle cx="12" cy="11" r="3"/></svg><div><b>Our Address</b><p>Barshive, Nr. Kashid Beach, Tal. Murud,<br>Dist. Raigad 402202, Maharashtra.</p></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><div><b>Reservation</b><p><a href="tel:+919167562668">+91 91675 62668</a><br><a href="tel:+919167562468">+91 91675 62468</a></p></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.5 9h17M3.5 15h17M12 3c-2.5 2.5-3.8 5.6-3.8 9S9.5 18.5 12 21c2.5-2.5 3.8-5.6 3.8-9S14.5 5.5 12 3z"/></svg><div><b>Social Media</b>
+          <div class="socials" style="margin-top:10px">
+            <a href="https://www.facebook.com/cocosinn.in/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://instagram.com/cocos.inn.resort" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://www.youtube.com/@COCOSINNRESORT" target="_blank" rel="noopener" aria-label="YouTube">yt</a>
+          </div></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 01-12.4 7.6L3 21l1.9-5.6A8.5 8.5 0 1121 11.5z"/></svg><div><b>WhatsApp</b><p><a href="https://wa.me/919167562668?text=Hi%20Coco%27s%20Inn%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener">Chat with us on WhatsApp →</a></p></div></div>
+      </div>
+      <div class="rv"><div class="form-card">
+        <h3 style="margin-bottom:6px">Make Reservation</h3>
+        <p style="font-size:14px;color:var(--ink-2);margin-bottom:20px">Send us your details and preferred check-in date.</p>
+        <div class="form-grid">
+          <div class="field"><label for="c-name">Name *</label><input id="c-name" type="text" placeholder="Your full name"></div>
+          <div class="field"><label for="c-email">Email *</label><input id="c-email" type="email" placeholder="you@email.com"></div>
+          <div class="field"><label for="c-phone">Phone Number *</label><input id="c-phone" type="tel" placeholder="+91"></div>
+          <div class="field"><label for="c-date">Check-In Date *</label><input id="c-date" type="date"></div>
+        </div>
+        <button class="btn dark" style="margin-top:22px;width:100%;justify-content:center" onclick="fakeSubmit(this)">Submit Enquiry</button>
+        <div class="ok-msg">Thank you! Your enquiry has been noted — our team will contact you shortly.</div>
+        <p class="form-note">Draft note: form will be wired to WPForms / email on the live build.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">Find Us</span><h2>On the Konkan coast, near Kashid Beach</h2></div>
+      <iframe class="map-frame rv" loading="lazy" title="Coco's Inn Resort on Google Maps" src="https://maps.google.com/maps?q=Coco%27s%20Inn%20Resort&t=m&z=15&output=embed&iwloc=near"></iframe>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="f-logo" src="https://cocosinn.com/wp-content/uploads/2024/07/cropped-Untitled_design__75_-removebg-preview-1-270x270.png" alt="Coco's Inn Resort">
+        <p style="font-size:14.5px;max-width:34ch">Coco's Inn Resort by Spicy Mango — coastal comfort with a touch of luxury near Kashid Beach, Alibaug.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/rooms">Our Rooms</a></li>
+          <li><a href="#/dining">Dining</a></li>
+          <li><a href="#/events">Events</a></li>
+          <li><a href="#/things">Things To Do</a></li>
+          <li><a href="#/reach">How to Reach</a></li>
+          <li><a href="#/about">About Us</a></li>
+          <li><a href="#/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reservation</h4>
+        <ul>
+          <li><a href="tel:+919167562668">+91 91675 62668</a></li>
+          <li><a href="tel:+919167562468">+91 91675 62468</a></li>
+          <li style="margin-top:8px"><a href="https://www.facebook.com/cocosinn.in/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://instagram.com/cocos.inn.resort" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@COCOSINNRESORT" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Address</h4>
+        <p style="font-size:14.5px">Barshive, Nr. Kashid Beach,<br>Tal. Murud, Dist. Raigad 402202,<br>Maharashtra, India.</p>
+        <a class="btn" style="margin-top:18px" href="#/contact">Book Now</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© Coco's Inn Resort. All rights reserved.</span>
+      <span>V1 design draft · Auspex Digital Marketing</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919167562668?text=Hi%20Coco%27s%20Inn%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.3 7L4 29l7.2-2.2c1.9 1 4 1.6 6.3 1.6h.5c6.6 0 12-5.4 12-12S22.6 3 16 3zm7 17c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.6-1.5-5.9-5.2-6.1-5.4-.2-.2-1.4-1.9-1.4-3.7s.9-2.6 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.6 1.2 2.8.1.2.2.4 0 .7-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.1.8-.1.2-.3 1-1.1 1.2-1.5.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1.9-.4 1.7z"/></svg>
+</a>
+
+<div class="lightbox" id="lb" onclick="this.classList.remove('open')">
+  <button aria-label="Close">&times;</button>
+  <img id="lb-img" src="" alt="Gallery image">
+</div>
+
+<script>
+// ---------- hash router ----------
+const pages=['home','rooms','dining','events','things','reach','about','contact'];
+function route(){
+  let h=(location.hash||'#/home').replace('#/','');
+  if(!pages.includes(h))h='home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('current'));
+  document.getElementById('pg-'+h).classList.add('current');
+  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===h));
+  document.getElementById('mm').classList.remove('open');
+  window.scrollTo({top:0,behavior:'instant'});
+  reveal();
+}
+window.addEventListener('hashchange',route);
+
+// ---------- sticky nav ----------
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>hdr.classList.toggle('solid',window.scrollY>40),{passive:true});
+
+// ---------- scroll reveal ----------
+let io;
+function reveal(){
+  if(io)io.disconnect();
+  const els=document.querySelectorAll('.page.current .rv');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return}
+  io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+  els.forEach(e=>{e.classList.remove('in');io.observe(e)});
+}
+
+// ---------- lightbox on all real photos ----------
+document.addEventListener('click',e=>{
+  const ph=e.target.closest('.photo img');
+  if(ph){document.getElementById('lb-img').src=ph.src;document.getElementById('lb').classList.add('open')}
+});
+
+// ---------- demo form ----------
+function fakeSubmit(btn){
+  const card=btn.closest('.form-card');
+  let ok=true;
+  card.querySelectorAll('input').forEach(i=>{
+    if(!i.value.trim()){i.style.borderColor='#d66';ok=false}else{i.style.borderColor='var(--sand-2)'}
+  });
+  if(ok){card.querySelector('.ok-msg').style.display='block';btn.textContent='Enquiry Sent ✓'}
+}
+
+route();
+</script>
+</body>
+</html>
