@@ -43,11 +43,13 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.15;color:var(
 .swoosh path{stroke:var(--ink);stroke-width:3.4;fill:none;stroke-linecap:round}
 
 /* ---------- nav ---------- */
-header{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .35s,box-shadow .35s,padding .35s;padding:18px 0}
-header.solid{background:rgba(251,250,245,.94);backdrop-filter:blur(12px);box-shadow:0 8px 30px -18px rgba(32,36,28,.35);padding:10px 0}
+header{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .35s,box-shadow .35s,padding .35s;padding:14px 0}
+header.solid{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);box-shadow:0 8px 30px -18px rgba(0,0,0,.3);padding:8px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{height:52px;width:auto;background:#fff;border-radius:12px;padding:5px;box-shadow:0 4px 14px -6px rgba(0,0,0,.35)}
+.brand img{height:44px;width:auto;background:#fff;border-radius:10px;padding:4px 8px;box-shadow:0 4px 14px -6px rgba(0,0,0,.35);transition:height .3s}
+header.solid .brand img{height:36px;box-shadow:none;border:1px solid #eee}
+@media(max-width:760px){.brand img{height:38px}header.solid .brand img{height:34px}}
 .brand .b-name{font-family:var(--serif);font-size:22px;letter-spacing:.02em;color:#fff;transition:color .35s}
 .brand .b-name em{font-style:normal;color:#fff}
 .navlinks{display:flex;gap:6px;align-items:center;list-style:none}
@@ -272,8 +274,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 <header id="hdr">
   <div class="wrap nav">
     <a href="#/home" class="brand">
-      <img src="https://cocosinn.com/wp-content/uploads/2024/07/cropped-Untitled_design__75_-removebg-preview-1-270x270.png" alt="Coco's Inn Resort logo">
-      <span class="b-name">Coco's <em>Inn</em></span>
+      <img src="https://cocosinn.com/wp-content/uploads/2024/07/cropped-Untitled_design__75_-removebg-preview-1-270x270.png" alt="Coco's Inn Resort">
     </a>
     <ul class="navlinks">
       <li><a href="#/home" data-nav="home">Home</a></li>
@@ -286,7 +287,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       <li><a href="#/about" data-nav="about">About Us</a></li>
       <li><a href="#/contact" data-nav="contact">Contact</a></li>
     </ul>
-    <a class="btn" href="#/contact">Book Now</a>
+    <a class="btn" style="padding:11px 22px" href="#/contact">Book Now</a>
     <button class="burger" aria-label="Open menu" onclick="document.getElementById('mm').classList.add('open')"><span></span><span></span><span></span></button>
   </div>
 </header>
