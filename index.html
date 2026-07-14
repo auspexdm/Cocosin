@@ -6,6 +6,7 @@
 <title>Coco's Inn Resort — Coastal Comfort Near Kashid Beach | Alibaug</title>
 <meta name="description" content="Coco's Inn Resort — coastal comfort with a touch of luxury just 4 km from Kashid Beach, Alibaug. Sea view rooms, Kokani dining, events & weddings.">
 <link rel="icon" href="https://cocosinn.com/wp-content/uploads/2024/07/cropped-Untitled_design__75_-removebg-preview-1-270x270.png">
+<link rel="preload" as="image" href="images/01.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -74,10 +75,8 @@ header.solid .burger span{background:var(--ink)}
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#fff;overflow:hidden;
- background:linear-gradient(160deg,#0b0b0b 0%,#1b1b1b 45%,#2e2e2e 100%)}
-.hero::after{content:"";position:absolute;inset:0;background:
- radial-gradient(1100px 500px at 85% 110%,rgba(255,255,255,.10),transparent 60%),
- radial-gradient(700px 400px at 8% -10%,rgba(255,255,255,.06),transparent 60%)}
+ background:url(images/01.webp) center/cover no-repeat #111}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.6) 100%)}
 .hero .palm-mark{position:absolute;right:-60px;bottom:-40px;width:min(46vw,520px);opacity:.14;pointer-events:none}
 .hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:90px}
 .hero .eyebrow{color:#cfcfcf}
@@ -283,6 +282,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       <li><a href="#/events" data-nav="events">Events</a></li>
       <li><a href="#/things" data-nav="things">Things To Do</a></li>
       <li><a href="#/reach" data-nav="reach">How to Reach</a></li>
+      <li><a href="#/gallery" data-nav="gallery">Gallery</a></li>
       <li><a href="#/about" data-nav="about">About Us</a></li>
       <li><a href="#/contact" data-nav="contact">Contact</a></li>
     </ul>
@@ -294,7 +294,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 <nav class="mobile-menu" id="mm" aria-label="Mobile navigation">
   <button class="close-m" aria-label="Close menu" onclick="document.getElementById('mm').classList.remove('open')">&times;</button>
   <a href="#/home">Home</a><a href="#/rooms">Our Rooms</a><a href="#/dining">Dining</a>
-  <a href="#/events">Events</a><a href="#/things">Things To Do</a><a href="#/reach">How to Reach</a><a href="#/about">About Us</a><a href="#/contact">Contact</a>
+  <a href="#/events">Events</a><a href="#/things">Things To Do</a><a href="#/reach">How to Reach</a><a href="#/gallery">Gallery</a><a href="#/about">About Us</a><a href="#/contact">Contact</a>
   <a class="btn" style="margin-top:18px" href="#/contact">Book Now</a>
 </nav>
 
@@ -303,8 +303,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 <div class="page" id="pg-home">
 
   <section class="hero">
-    <svg class="palm-mark" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 195V95M100 95C70 70 40 68 15 82c35-28 66-24 85 5M100 95c30-25 60-27 85-13-35-28-66-24-85 5M100 95C88 60 92 32 112 12 82 26 76 60 96 90M100 95c12-35 8-63-12-83 30 14 36 48 16 78" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
-    <div class="wrap">
+        <div class="wrap">
       <span class="eyebrow rv">Kashid Beach · Alibaug · Maharashtra</span>
       <h1 class="rv">Welcome to Coco's Inn — where <em>comfort</em> meets convenience.</h1>
       <svg class="swoosh rv" viewBox="0 0 74 16" aria-hidden="true" style="--s:1"><path style="stroke:#fff" d="M2 12C20 2 54 2 72 12"/></svg>
@@ -318,8 +317,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
         <div><b>950+</b><span>Google Reviews</span></div>
               </div>
     </div>
-    <span class="media-tag">Hero video / drone footage drops in here — v2</span>
-    <div class="scroll-hint" aria-hidden="true"></div>
+        <div class="scroll-hint" aria-hidden="true"></div>
   </section>
 
   <section class="block">
@@ -333,11 +331,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
         <p style="margin-top:14px">Whether you're here for work, a weekend escape, or a peaceful family getaway, <b>Coco's Inn</b> invites you to experience the beauty of Kashid in comfort and style.</p>
       </div>
       <div class="rv">
-        <div class="ph" style="aspect-ratio:4/4.6;border-radius:var(--radius);box-shadow:var(--shadow)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <b>Resort exterior · Pool · Lawn</b>
-          <small>Replace with hero photo from current site gallery</small>
-        </div>
+        <div class="photo" style="aspect-ratio:4/4.6;border-radius:var(--radius);box-shadow:var(--shadow)"><img loading="lazy" src="images/06.webp" alt="Poolside at Coco's Inn Resort"></div>
       </div>
     </div>
   </section>
@@ -350,15 +344,15 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       </div>
       <div class="grid g3">
         <a class="card rv" href="#/rooms">
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M3 18h18M6 10V7a2 2 0 012-2h8a2 2 0 012 2v3"/></svg><b>Rooms photo</b><small>From current site — Our Rooms gallery</small></div>
+          <div class="photo"><img loading="lazy" src="images/21.webp" alt="Room interior at Coco's Inn"></div>
           <div class="body"><span class="tagline">Our Rooms</span><h3>Get ready to live, for unlimited living</h3><p>Five sea-view and garden-view room categories, from premium AC rooms to family stays.</p></div>
         </a>
         <a class="card rv" href="#/things">
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3M12 21a6 6 0 006-6H6a6 6 0 006 6z"/></svg><b>Kashid Beach photo</b><small>From current site — Things To Do</small></div>
+          <div class="photo"><img loading="lazy" src="images/18.webp" alt="Sea view near Coco's Inn"></div>
           <div class="body"><span class="tagline">Things To Do</span><h3>Let's go everywhere</h3><p>Kashid Beach, Murud-Janjira Fort, lighthouses, temples and wildlife trails.</p></div>
         </a>
         <a class="card rv" href="#/dining">
-          <div class="photo"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/33-1024x683.jpg" alt="Dining at Coco's Inn"></div>
+          <div class="photo"><img loading="lazy" src="images/49.webp" alt="Dining at Coco's Inn"></div>
           <div class="body"><span class="tagline">Dining</span><h3>Discover the difference</h3><p>Authentic Kokani coastal cuisine plus multicuisine veg & non-veg favourites, by the sea.</p></div>
         </a>
       </div>
@@ -438,7 +432,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
     <div class="wrap grid g2" style="gap:34px">
 
       <div class="card rv">
-        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 11 photos</b><small>Sea View Premium AC — insert from current site</small></div>
+        <div class="photo"><img loading="lazy" src="images/22.webp" alt="Sea View Premium AC Room"></div>
         <div class="body">
           <span class="tagline">Open the door for a spacious living</span>
           <h3>Sea View Premium AC Room</h3>
@@ -449,7 +443,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       </div>
 
       <div class="card rv">
-        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 9 photos</b><small>Garden View Family — insert from current site</small></div>
+        <div class="photo"><img loading="lazy" src="images/25.webp" alt="Premium Garden View Family Room"></div>
         <div class="body">
           <span class="tagline">Get ready to live for unlimited living</span>
           <h3>Premium Garden View Family Room</h3>
@@ -460,7 +454,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       </div>
 
       <div class="card rv">
-        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 5 photos</b><small>Standard Sea View — insert from current site</small></div>
+        <div class="photo"><img loading="lazy" src="images/28.webp" alt="Standard Sea View Room"></div>
         <div class="body">
           <span class="tagline">Open the door for a spacious living</span>
           <h3>Standard Sea View Room</h3>
@@ -471,7 +465,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       </div>
 
       <div class="card rv">
-        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 9 photos</b><small>Sea View Balcony — insert from current site</small></div>
+        <div class="photo"><img loading="lazy" src="images/16.webp" alt="Sea View Balcony Room"></div>
         <div class="body">
           <span class="tagline">Open the door for a spacious living</span>
           <h3>Sea View Balcony Room</h3>
@@ -483,7 +477,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
       <div class="card rv" style="grid-column:1/-1">
         <div class="body" style="display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:center">
-          <div class="ph" style="border-radius:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Room gallery · 7 photos</b><small>NON AC Sea View — insert from current site</small></div>
+          <div class="photo" style="border-radius:12px"><img loading="lazy" src="images/35.webp" alt="NON AC Sea View Room"></div>
           <div style="display:flex;flex-direction:column;gap:12px">
             <span class="tagline">Open the door for a spacious living</span>
             <h3>NON AC Sea View Room</h3>
@@ -527,10 +521,10 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
         <a class="btn dark" style="margin-top:26px" href="#/contact">Reserve a Table</a>
       </div>
       <div class="grid g2 rv" style="gap:16px">
-        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/33-1024x683.jpg" alt="Restaurant at Coco's Inn"></div>
-        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/42-1-1024x668.jpg" alt="Dining ambience"></div>
-        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/34-1024x683.jpg" alt="Food at Coco's Inn"></div>
-        <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/43-1024x668.jpg" alt="Coastal dining"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/49.webp" alt="Restaurant at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/50.webp" alt="Dining ambience"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/51.webp" alt="Food at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/52.webp" alt="Coastal dining"></div>
       </div>
     </div>
   </section>
@@ -550,10 +544,10 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       </div>
       <div class="rv">
         <div class="grid" style="gap:16px">
-          <div class="photo" style="aspect-ratio:16/10;border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/images-_3_-1.jpg" alt="Kokani fish delicacy"></div>
+          <div class="photo" style="aspect-ratio:16/10;border-radius:14px"><img loading="lazy" src="images/60.webp" alt="Kokani fish delicacy"></div>
           <div class="grid g2" style="gap:16px">
-            <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/download-_6_-1.jpg" alt="Coastal delicacy"></div>
-            <div class="photo" style="border-radius:14px"><img loading="lazy" src="https://cocosinn.com/wp-content/uploads/2024/09/download-_7_-1-1.jpg" alt="Konkan cuisine"></div>
+            <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/62.webp" alt="Coastal delicacy"></div>
+            <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/64.webp" alt="Konkan cuisine"></div>
           </div>
         </div>
         <p style="margin-top:20px;font-size:15px"><b>Local ingredients:</b> the coastal region of Alibag provides an abundance of fresh seafood, coconuts and tropical fruits — all integral to Kokani cuisine. Our dishes are a celebration of these local flavours, offering a true taste of the region.</p>
@@ -588,9 +582,9 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
         <p>From intimate gatherings to grand celebrations, we bring your wedding vision to life. Beautiful spaces, exceptional service and a touch of magic make your big day unforgettable — memories that last a lifetime.</p>
       </div>
       <div class="grid g3">
-        <div class="ph rv" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.4-9.5 9-9.5 9z"/></svg><b>Wedding gallery 1</b><small>Insert wedding photos from current site</small></div>
-        <div class="ph rv" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.4-9.5 9-9.5 9z"/></svg><b>Wedding gallery 2</b><small>Insert wedding photos from current site</small></div>
-        <div class="ph rv" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.4-9.5 9-9.5 9z"/></svg><b>Wedding gallery 3</b><small>Insert wedding photos from current site</small></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/78.webp" alt="Celebrations at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/79.webp" alt="Celebrations at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/82.webp" alt="Celebrations at Coco's Inn"></div>
       </div>
       <div style="text-align:center;margin-top:40px"><a class="btn rv" href="#/contact">Plan Your Event</a></div>
     </div>
@@ -605,10 +599,10 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
         <p style="margin-top:16px">Transform your corporate gatherings into exceptional experiences. From strategic business meetings to grand conferences, we provide the perfect setting with state-of-the-art facilities, tailored event services and a serene coastal ambiance. Our professional team ensures every detail is seamlessly handled, allowing you to focus on your goals while leaving a lasting impression on your guests.</p>
       </div>
       <div class="grid g2 rv" style="gap:16px">
-        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 1</b><small>Corporate event gallery · current site</small></div>
-        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 2</b><small>Corporate event gallery · current site</small></div>
-        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 3</b><small>Corporate event gallery · current site</small></div>
-        <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Event photo 4</b><small>Corporate event gallery · current site</small></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/12.webp" alt="Corporate event space at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/13.webp" alt="Corporate event space at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/80.webp" alt="Corporate event space at Coco's Inn"></div>
+        <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/81.webp" alt="Corporate event space at Coco's Inn"></div>
       </div>
     </div>
   </section>
@@ -616,12 +610,12 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
   <section class="block tint">
     <div class="wrap split">
       <div class="grid g3 rv" style="gap:14px;order:1">
-        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 1</b></div>
-        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 2</b></div>
-        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 3</b></div>
-        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 4</b></div>
-        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 5</b></div>
-        <div class="ph" style="border-radius:12px;aspect-ratio:1/1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Activity 6</b></div>
+        <div class="photo" style="border-radius:12px;aspect-ratio:1/1"><img loading="lazy" src="images/05.webp" alt="Corporate activity at Coco's Inn"></div>
+        <div class="photo" style="border-radius:12px;aspect-ratio:1/1"><img loading="lazy" src="images/07.webp" alt="Corporate activity at Coco's Inn"></div>
+        <div class="photo" style="border-radius:12px;aspect-ratio:1/1"><img loading="lazy" src="images/15.webp" alt="Corporate activity at Coco's Inn"></div>
+        <div class="photo" style="border-radius:12px;aspect-ratio:1/1"><img loading="lazy" src="images/19.webp" alt="Corporate activity at Coco's Inn"></div>
+        <div class="photo" style="border-radius:12px;aspect-ratio:1/1"><img loading="lazy" src="images/83.webp" alt="Corporate activity at Coco's Inn"></div>
+        <div class="photo" style="border-radius:12px;aspect-ratio:1/1"><img loading="lazy" src="images/85.webp" alt="Corporate activity at Coco's Inn"></div>
       </div>
       <div class="rv" style="order:2">
         <span class="eyebrow">Corporate Activity</span>
@@ -647,7 +641,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
   <section class="block">
     <div class="wrap grid g2" style="gap:30px">
-      <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 18c3-1.5 5-1.5 8 0s5 1.5 8 0M12 12V4M8 7l4-3 4 3"/></svg><b>Kashid Beach</b><small>Insert photos from current site</small></div>
+      <div class="card rv"><div class="photo"><img loading="lazy" src="images/17.webp" alt="Coastline near Kashid Beach"></div>
         <div class="body"><span class="tagline">Experience the magic of sun, sand and sea</span><h3>Explore Kashid Beach — just minutes away</h3><p>The perfect blend of serenity and adventure. Relax on the soft sands, take long walks along the shore and soak in the sea breeze — a must-visit gem for every guest.</p></div></div>
       <div class="card rv"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 21V10l4-3 4 3 4-3 4 3v11M4 21h16M9 21v-5h6v5"/></svg><b>Murud-Janjira Fort</b><small>Insert photos from current site</small></div>
         <div class="body"><span class="tagline">Step into the past — an unconquered legacy</span><h3>Historical charm at Murud-Janjira Fort</h3><p>A short drive away, this island fort is famous for remaining unconquered despite several invasion attempts. The scenic boat ride adds a layer of adventure to your historical exploration.</p></div></div>
@@ -688,10 +682,10 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
         <p style="margin-top:14px">Guests can embark on nature walks, enjoy bonfires and poolside dining, play indoor and outdoor games with family, or simply relax with a book on the sandy shores.</p>
       </div>
       <div class="rv grid" style="gap:16px">
-        <div class="ph" style="aspect-ratio:16/9;border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Resort overview photo</b><small>From current site — About gallery (7 images)</small></div>
+        <div class="photo" style="aspect-ratio:16/9;border-radius:14px"><img loading="lazy" src="images/02.webp" alt="Aerial view of Coco's Inn Resort"></div>
         <div class="grid g2" style="gap:16px">
-          <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Pool photo</b></div>
-          <div class="ph" style="border-radius:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg><b>Lawn photo</b></div>
+          <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/08.webp" alt="Swimming pool"></div>
+          <div class="photo" style="border-radius:14px"><img loading="lazy" src="images/14.webp" alt="Lawn and gardens"></div>
         </div>
       </div>
     </div>
@@ -826,6 +820,116 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
   </section>
 </div>
 
+<!-- ============================ GALLERY ============================ -->
+<div class="page" id="pg-gallery">
+  <section class="banner">
+    <div class="wrap">
+      <span class="crumb">Home · Gallery</span>
+      <h1>Moments at <em>Coco's Inn</em></h1>
+      <p>The resort through the lens — pools, rooms, dining, sunsets and the Konkan coast. Tap any photo to view it full screen.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="masonry">
+<div class="tile rv"><img loading="lazy" src="images/01.webp" alt="Coco's Inn Resort photo 1"></div>
+<div class="tile rv"><img loading="lazy" src="images/02.webp" alt="Coco's Inn Resort photo 2"></div>
+<div class="tile rv"><img loading="lazy" src="images/03.webp" alt="Coco's Inn Resort photo 3"></div>
+<div class="tile rv"><img loading="lazy" src="images/04.webp" alt="Coco's Inn Resort photo 4"></div>
+<div class="tile rv"><img loading="lazy" src="images/05.webp" alt="Coco's Inn Resort photo 5"></div>
+<div class="tile rv"><img loading="lazy" src="images/06.webp" alt="Coco's Inn Resort photo 6"></div>
+<div class="tile rv"><img loading="lazy" src="images/07.webp" alt="Coco's Inn Resort photo 7"></div>
+<div class="tile rv"><img loading="lazy" src="images/08.webp" alt="Coco's Inn Resort photo 8"></div>
+<div class="tile rv"><img loading="lazy" src="images/09.webp" alt="Coco's Inn Resort photo 9"></div>
+<div class="tile rv"><img loading="lazy" src="images/10.webp" alt="Coco's Inn Resort photo 10"></div>
+<div class="tile rv"><img loading="lazy" src="images/11.webp" alt="Coco's Inn Resort photo 11"></div>
+<div class="tile rv"><img loading="lazy" src="images/12.webp" alt="Coco's Inn Resort photo 12"></div>
+<div class="tile rv"><img loading="lazy" src="images/13.webp" alt="Coco's Inn Resort photo 13"></div>
+<div class="tile rv"><img loading="lazy" src="images/14.webp" alt="Coco's Inn Resort photo 14"></div>
+<div class="tile rv"><img loading="lazy" src="images/15.webp" alt="Coco's Inn Resort photo 15"></div>
+<div class="tile rv"><img loading="lazy" src="images/16.webp" alt="Coco's Inn Resort photo 16"></div>
+<div class="tile rv"><img loading="lazy" src="images/17.webp" alt="Coco's Inn Resort photo 17"></div>
+<div class="tile rv"><img loading="lazy" src="images/18.webp" alt="Coco's Inn Resort photo 18"></div>
+<div class="tile rv"><img loading="lazy" src="images/19.webp" alt="Coco's Inn Resort photo 19"></div>
+<div class="tile rv"><img loading="lazy" src="images/20.webp" alt="Coco's Inn Resort photo 20"></div>
+<div class="tile rv"><img loading="lazy" src="images/21.webp" alt="Coco's Inn Resort photo 21"></div>
+<div class="tile rv"><img loading="lazy" src="images/22.webp" alt="Coco's Inn Resort photo 22"></div>
+<div class="tile rv"><img loading="lazy" src="images/23.webp" alt="Coco's Inn Resort photo 23"></div>
+<div class="tile rv"><img loading="lazy" src="images/24.webp" alt="Coco's Inn Resort photo 24"></div>
+<div class="tile rv"><img loading="lazy" src="images/25.webp" alt="Coco's Inn Resort photo 25"></div>
+<div class="tile rv"><img loading="lazy" src="images/26.webp" alt="Coco's Inn Resort photo 26"></div>
+<div class="tile rv"><img loading="lazy" src="images/27.webp" alt="Coco's Inn Resort photo 27"></div>
+<div class="tile rv"><img loading="lazy" src="images/28.webp" alt="Coco's Inn Resort photo 28"></div>
+<div class="tile rv"><img loading="lazy" src="images/29.webp" alt="Coco's Inn Resort photo 29"></div>
+<div class="tile rv"><img loading="lazy" src="images/30.webp" alt="Coco's Inn Resort photo 30"></div>
+<div class="tile rv"><img loading="lazy" src="images/31.webp" alt="Coco's Inn Resort photo 31"></div>
+<div class="tile rv"><img loading="lazy" src="images/32.webp" alt="Coco's Inn Resort photo 32"></div>
+<div class="tile rv"><img loading="lazy" src="images/33.webp" alt="Coco's Inn Resort photo 33"></div>
+<div class="tile rv"><img loading="lazy" src="images/34.webp" alt="Coco's Inn Resort photo 34"></div>
+<div class="tile rv"><img loading="lazy" src="images/35.webp" alt="Coco's Inn Resort photo 35"></div>
+<div class="tile rv"><img loading="lazy" src="images/36.webp" alt="Coco's Inn Resort photo 36"></div>
+<div class="tile rv"><img loading="lazy" src="images/37.webp" alt="Coco's Inn Resort photo 37"></div>
+<div class="tile rv"><img loading="lazy" src="images/38.webp" alt="Coco's Inn Resort photo 38"></div>
+<div class="tile rv"><img loading="lazy" src="images/39.webp" alt="Coco's Inn Resort photo 39"></div>
+<div class="tile rv"><img loading="lazy" src="images/40.webp" alt="Coco's Inn Resort photo 40"></div>
+<div class="tile rv"><img loading="lazy" src="images/41.webp" alt="Coco's Inn Resort photo 41"></div>
+<div class="tile rv"><img loading="lazy" src="images/42.webp" alt="Coco's Inn Resort photo 42"></div>
+<div class="tile rv"><img loading="lazy" src="images/43.webp" alt="Coco's Inn Resort photo 43"></div>
+<div class="tile rv"><img loading="lazy" src="images/44.webp" alt="Coco's Inn Resort photo 44"></div>
+<div class="tile rv"><img loading="lazy" src="images/45.webp" alt="Coco's Inn Resort photo 45"></div>
+<div class="tile rv"><img loading="lazy" src="images/46.webp" alt="Coco's Inn Resort photo 46"></div>
+<div class="tile rv"><img loading="lazy" src="images/47.webp" alt="Coco's Inn Resort photo 47"></div>
+<div class="tile rv"><img loading="lazy" src="images/48.webp" alt="Coco's Inn Resort photo 48"></div>
+<div class="tile rv"><img loading="lazy" src="images/49.webp" alt="Coco's Inn Resort photo 49"></div>
+<div class="tile rv"><img loading="lazy" src="images/50.webp" alt="Coco's Inn Resort photo 50"></div>
+<div class="tile rv"><img loading="lazy" src="images/51.webp" alt="Coco's Inn Resort photo 51"></div>
+<div class="tile rv"><img loading="lazy" src="images/52.webp" alt="Coco's Inn Resort photo 52"></div>
+<div class="tile rv"><img loading="lazy" src="images/53.webp" alt="Coco's Inn Resort photo 53"></div>
+<div class="tile rv"><img loading="lazy" src="images/54.webp" alt="Coco's Inn Resort photo 54"></div>
+<div class="tile rv"><img loading="lazy" src="images/55.webp" alt="Coco's Inn Resort photo 55"></div>
+<div class="tile rv"><img loading="lazy" src="images/56.webp" alt="Coco's Inn Resort photo 56"></div>
+<div class="tile rv"><img loading="lazy" src="images/57.webp" alt="Coco's Inn Resort photo 57"></div>
+<div class="tile rv"><img loading="lazy" src="images/58.webp" alt="Coco's Inn Resort photo 58"></div>
+<div class="tile rv"><img loading="lazy" src="images/59.webp" alt="Coco's Inn Resort photo 59"></div>
+<div class="tile rv"><img loading="lazy" src="images/60.webp" alt="Coco's Inn Resort photo 60"></div>
+<div class="tile rv"><img loading="lazy" src="images/61.webp" alt="Coco's Inn Resort photo 61"></div>
+<div class="tile rv"><img loading="lazy" src="images/62.webp" alt="Coco's Inn Resort photo 62"></div>
+<div class="tile rv"><img loading="lazy" src="images/63.webp" alt="Coco's Inn Resort photo 63"></div>
+<div class="tile rv"><img loading="lazy" src="images/64.webp" alt="Coco's Inn Resort photo 64"></div>
+<div class="tile rv"><img loading="lazy" src="images/65.webp" alt="Coco's Inn Resort photo 65"></div>
+<div class="tile rv"><img loading="lazy" src="images/66.webp" alt="Coco's Inn Resort photo 66"></div>
+<div class="tile rv"><img loading="lazy" src="images/67.webp" alt="Coco's Inn Resort photo 67"></div>
+<div class="tile rv"><img loading="lazy" src="images/68.webp" alt="Coco's Inn Resort photo 68"></div>
+<div class="tile rv"><img loading="lazy" src="images/69.webp" alt="Coco's Inn Resort photo 69"></div>
+<div class="tile rv"><img loading="lazy" src="images/70.webp" alt="Coco's Inn Resort photo 70"></div>
+<div class="tile rv"><img loading="lazy" src="images/71.webp" alt="Coco's Inn Resort photo 71"></div>
+<div class="tile rv"><img loading="lazy" src="images/72.webp" alt="Coco's Inn Resort photo 72"></div>
+<div class="tile rv"><img loading="lazy" src="images/73.webp" alt="Coco's Inn Resort photo 73"></div>
+<div class="tile rv"><img loading="lazy" src="images/74.webp" alt="Coco's Inn Resort photo 74"></div>
+<div class="tile rv"><img loading="lazy" src="images/75.webp" alt="Coco's Inn Resort photo 75"></div>
+<div class="tile rv"><img loading="lazy" src="images/76.webp" alt="Coco's Inn Resort photo 76"></div>
+<div class="tile rv"><img loading="lazy" src="images/77.webp" alt="Coco's Inn Resort photo 77"></div>
+<div class="tile rv"><img loading="lazy" src="images/78.webp" alt="Coco's Inn Resort photo 78"></div>
+<div class="tile rv"><img loading="lazy" src="images/79.webp" alt="Coco's Inn Resort photo 79"></div>
+<div class="tile rv"><img loading="lazy" src="images/80.webp" alt="Coco's Inn Resort photo 80"></div>
+<div class="tile rv"><img loading="lazy" src="images/81.webp" alt="Coco's Inn Resort photo 81"></div>
+<div class="tile rv"><img loading="lazy" src="images/82.webp" alt="Coco's Inn Resort photo 82"></div>
+<div class="tile rv"><img loading="lazy" src="images/83.webp" alt="Coco's Inn Resort photo 83"></div>
+<div class="tile rv"><img loading="lazy" src="images/84.webp" alt="Coco's Inn Resort photo 84"></div>
+<div class="tile rv"><img loading="lazy" src="images/85.webp" alt="Coco's Inn Resort photo 85"></div>
+<div class="tile rv"><img loading="lazy" src="images/86.webp" alt="Coco's Inn Resort photo 86"></div>
+<div class="tile rv"><img loading="lazy" src="images/87.webp" alt="Coco's Inn Resort photo 87"></div>
+<div class="tile rv"><img loading="lazy" src="images/88.webp" alt="Coco's Inn Resort photo 88"></div>
+<div class="tile rv"><img loading="lazy" src="images/89.webp" alt="Coco's Inn Resort photo 89"></div>
+<div class="tile rv"><img loading="lazy" src="images/90.webp" alt="Coco's Inn Resort photo 90"></div>
+<div class="tile rv"><img loading="lazy" src="images/91.webp" alt="Coco's Inn Resort photo 91"></div>
+<div class="tile rv"><img loading="lazy" src="images/92.webp" alt="Coco's Inn Resort photo 92"></div>
+<div class="tile rv"><img loading="lazy" src="images/93.webp" alt="Coco's Inn Resort photo 93"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ============================ CONTACT ============================ -->
 <div class="page" id="pg-contact">
   <section class="banner">
@@ -890,6 +994,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
           <li><a href="#/events">Events</a></li>
           <li><a href="#/things">Things To Do</a></li>
           <li><a href="#/reach">How to Reach</a></li>
+          <li><a href="#/gallery">Gallery</a></li>
           <li><a href="#/about">About Us</a></li>
           <li><a href="#/contact">Contact</a></li>
         </ul>
@@ -961,7 +1066,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <script>
 // ---------- hash router ----------
-const pages=['home','rooms','dining','events','things','reach','about','contact'];
+const pages=['home','rooms','dining','events','things','reach','gallery','about','contact'];
 function route(){
   let h=(location.hash||'#/home').replace('#/','');
   if(!pages.includes(h))h='home';
@@ -990,7 +1095,7 @@ function reveal(){
 
 // ---------- lightbox on all real photos ----------
 document.addEventListener('click',e=>{
-  const ph=e.target.closest('.photo img');
+  const ph=e.target.closest('.photo img,.masonry .tile img');
   if(ph){document.getElementById('lb-img').src=ph.src;document.getElementById('lb').classList.add('open')}
 });
 
