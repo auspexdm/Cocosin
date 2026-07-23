@@ -208,12 +208,15 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .f-logo{height:76px;width:auto;max-width:230px;object-fit:contain;margin-bottom:16px;display:block}
 
 /* ---------- page banner ---------- */
-.banner{position:relative;padding:170px 0 90px;color:#fff;background:linear-gradient(150deg,#0b0b0b,#2c2c2c 90%)}
+.banner{position:relative;min-height:440px;padding:150px 0 60px;color:#fff;display:flex;align-items:center;background:linear-gradient(150deg,#0b0b0b,#2c2c2c 90%);background-size:cover;background-position:center}
+@media(max-width:900px){.banner{min-height:380px;padding:130px 0 50px}}
+@media(max-width:600px){.banner{min-height:340px;padding:120px 0 40px}}
+.banner .wrap{width:100%}
 .banner::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 380px at 90% 120%,rgba(255,255,255,.09),transparent 65%)}
 .banner .wrap{position:relative;z-index:2}
-.banner h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3.4rem);max-width:22ch;margin-top:16px}
+.banner h1{color:#fff;font-size:clamp(1.8rem,3.8vw,2.9rem);max-width:20ch;margin-top:12px}
 .banner h1 em{font-style:italic;color:#d6d6d6}
-.banner p{max-width:64ch;color:rgba(255,255,255,.82);margin-top:16px}
+.banner p{max-width:62ch;color:rgba(255,255,255,.85);margin-top:12px;font-size:15px}
 .crumb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#cfcfcf;font-weight:700}
 
 /* ---------- floating whatsapp ---------- */
@@ -447,7 +450,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ ROOMS ============================ -->
 <div class="page" id="pg-rooms">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url(images/63.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/63.webp)">
     <div class="wrap">
       <span class="crumb">Home · Our Rooms</span>
       <h1>Unwind in our coastal retreat — the perfect blend of <em>luxury, comfort & serenity</em></h1>
@@ -507,7 +510,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ DINING ============================ -->
 <div class="page" id="pg-dining">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url(images/29.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/29.webp)">
     <div class="wrap">
       <span class="crumb">Home · Dining</span>
       <h1>Experience Coco's Inn — cultured in <em>hospitality, relaxation & luxury</em></h1>
@@ -571,7 +574,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ EVENTS ============================ -->
 <div class="page" id="pg-events">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url(images/26.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/26.webp)">
     <div class="wrap">
       <span class="crumb">Home · Events</span>
       <h1>"Plan, celebrate and cherish — discover <em>events</em> at Coco's Inn"</h1>
@@ -636,7 +639,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ THINGS TO DO ============================ -->
 <div class="page" id="pg-things">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/loc_kashid.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/loc_kashid.webp)">
     <div class="wrap">
       <span class="crumb">Home · Things To Do</span>
       <h1>More closer to <em>paradise</em></h1>
@@ -669,7 +672,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ ABOUT ============================ -->
 <div class="page" id="pg-about">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url(images/41.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/41.webp)">
     <div class="wrap">
       <span class="crumb">Home · About Us</span>
       <h1>Your coastal haven of <em>comfort & serenity</em></h1>
@@ -750,7 +753,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ HOW TO REACH ============================ -->
 <div class="page" id="pg-reach">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/loc_m2m.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/loc_m2m.webp)">
     <div class="wrap">
       <span class="crumb">Home · How to Reach</span>
       <h1>Getting here is part of the <em>journey</em></h1>
@@ -852,7 +855,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ GALLERY ============================ -->
 <div class="page" id="pg-gallery">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url(images/23.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/23.webp)">
     <div class="wrap">
       <span class="crumb">Home · Gallery</span>
       <h1>Moments at <em>Coco's Inn</em></h1>
@@ -888,7 +891,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 <!-- ============================ CONTACT ============================ -->
 <div class="page" id="pg-contact">
-  <section class="banner" style="background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url(images/28.webp) center/cover no-repeat">
+  <section class="banner" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(images/28.webp)">
     <div class="wrap">
       <span class="crumb">Home · Contact</span>
       <h1>We'd love to <em>host you</em></h1>
