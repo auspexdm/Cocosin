@@ -216,8 +216,8 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
 /* ---------- page banner ---------- */
 .banner{position:relative;height:560px;min-height:560px;padding:110px 0 40px;color:#fff;display:flex;align-items:center;overflow:hidden;background:linear-gradient(150deg,#0b0b0b,#2c2c2c 90%);background-size:cover;background-position:center}
-@media(max-width:900px){.banner{height:460px;min-height:460px;padding:100px 0 36px}}
-@media(max-width:600px){.banner{height:400px;min-height:400px;padding:96px 0 32px}}
+@media(max-width:900px){.banner{height:auto;min-height:420px;padding:110px 0 44px;align-items:flex-start}}
+@media(max-width:600px){.banner{height:auto;min-height:340px;padding:104px 0 34px;align-items:flex-start}.banner h1{font-size:clamp(1.6rem,7vw,2.2rem)}.banner p{font-size:14px}}
 .banner .wrap{width:100%}
 .banner::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 380px at 90% 120%,rgba(255,255,255,.09),transparent 65%)}
 .banner .wrap{position:relative;z-index:2}
@@ -504,15 +504,13 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
       </div>
 
       <div class="card rv" style="grid-column:1/-1">
-        <div class="body" style="display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:center">
-          <div class="carousel" style="border-radius:12px" data-i="0"><div class="c-track"><img loading="lazy" src="images/rd1.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd2.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd3.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd4.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd5.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd6.webp" alt="Duplex Family Sea View Room"></div><button class="c-btn c-prev" aria-label="Previous photo">‹</button><button class="c-btn c-next" aria-label="Next photo">›</button><div class="c-dots"><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div></div>
+        <div class="carousel" data-i="0"><div class="c-track"><img loading="lazy" src="images/rd1.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd2.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd3.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd4.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd5.webp" alt="Duplex Family Sea View Room"><img loading="lazy" src="images/rd6.webp" alt="Duplex Family Sea View Room"></div><button class="c-btn c-prev" aria-label="Previous photo">‹</button><button class="c-btn c-next" aria-label="Next photo">›</button><div class="c-dots"><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div></div>
           <div style="display:flex;flex-direction:column;gap:12px">
             <span class="tagline">Our signature split-level stay</span>
             <h3>Duplex Family Sea View Room</h3>
             <p>A unique two-level stay designed for comfort and fun. The room features a cozy loft area of roughly three feet in height, comfortably accommodating two adults up to six feet tall — a favourite with families and groups, and a genuinely different way to spend a weekend by the sea.</p>
             <div class="chips"><span>King bed + loft</span><span>Sleeps 4</span><span>Air conditioning</span><span>Television</span><span>Mini cooler</span><span>Electric kettle</span><span>Hair dryer</span><span>Intercom</span><span>Free Wi-Fi</span></div>
             <div class="price-row"><div class="price">Live rates<small>on our booking engine</small></div><a class="btn" target="_blank" rel="noopener" href="https://bookingengine.stayflexi.com/?hotel_id=30260">Book Now</a></div>
-          </div>
         </div>
       </div>
 
