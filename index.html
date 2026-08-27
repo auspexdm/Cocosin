@@ -1109,6 +1109,11 @@ function route(){
 }
 window.addEventListener('hashchange',route);
 window.addEventListener('hashchange',()=>{ if(window.fbq) fbq('track','PageView'); });
+window.addEventListener('hashchange',()=>{
+  if(!window.fbq) return;
+  const h=(location.hash||'#/home').replace('#/','');
+  if(['rooms','dining','events'].includes(h)) fbq('track','ViewContent',{content_name:h});
+});
 
 // ---------- sticky nav ----------
 const hdr=document.getElementById('hdr');
@@ -1137,6 +1142,7 @@ function toggleBudget(p){
   document.getElementById(p+'-budget-wrap').style.display = t.includes('Stay')?'none':'flex';
 }
 function deliver(channel,subject,msg){
+  if(window.fbq) fbq('track','Lead');
   if(channel==='wa') window.open('https://wa.me/'+RESORT_WA+'?text='+encodeURIComponent(msg),'_blank');
   else window.location.href='mailto:'+RESORT_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(msg);
 }
@@ -1172,7 +1178,7 @@ function bkNights(){
   const i=document.getElementById('bk-in').value,o=document.getElementById('bk-out').value,s=document.getElementById('bk-sum');
   if(i&&o){
     const n=Math.round((new Date(o)-new Date(i))/86400000);
-    if(n>0){s.textContent='🌴 '+n+' night'+(n>1?'s':'')+' · '+new Date(i).toDateString().slice(4,10)+' → '+new Date(o).toDateString().slice(4,10);s.classList.add('show');return}
+    if(n>0){s.textContent='🌴 '+n+' night'+(n>1?'s':'')+' · '+new Date(i).toDateString().slice(4,10)+' → '+new Date(o).toDateString().slice(4,10);s.classList.add('show');if(window.fbq&&!s.dataset.tracked){fbq('track','Schedule');s.dataset.tracked='1'}return}
     s.textContent='Check-out must be after check-in';s.classList.add('show');return
   }
   s.classList.remove('show');
@@ -1210,16 +1216,24 @@ function sendBook(channel){
       "Name: "+name+"\nPhone: "+ph+"\n\nPlease share availability and packages. Thank you!";
     subj="Event enquiry — "+g('bk-etype').value+" — "+name;
   }
+  if(window.fbq){
+    if(tab==='stay') fbq('track','InitiateCheckout',{content_name:g('bk-room').value});
+    else fbq('track','Lead',{content_name:'event enquiry'});
+  }
   if(channel==='wa') window.open('https://wa.me/'+RESORT_WA+'?text='+encodeURIComponent(msg),'_blank');
   else window.location.href='mailto:'+RESORT_EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(msg);
 }
-// event CTAs open the enquiry modal on the Event tab
 document.addEventListener('click',e=>{
   const a=e.target.closest('a.btn');
   if(!a)return;
   if(a.textContent.trim()==='Plan Your Event'){
     e.preventDefault(); openBook(null); bkTab('event');
   }
+});
+// direct Book Now / Book Your Stay links -> Stayflexi
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href*="bookingengine.stayflexi.com"]');
+  if(a && window.fbq) fbq('track','InitiateCheckout',{content_name:a.textContent.trim()});
 });
 
 // ---------- room photo carousels ----------
