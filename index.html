@@ -303,6 +303,15 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
  .f-grid{grid-template-columns:1fr}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LSQSN0VGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8LSQSN0VGB');
+</script>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -1233,7 +1242,13 @@ document.addEventListener('click',e=>{
 // direct Book Now / Book Your Stay links -> Stayflexi
 document.addEventListener('click',e=>{
   const a=e.target.closest('a[href*="bookingengine.stayflexi.com"]');
-  if(a && window.fbq) fbq('track','InitiateCheckout',{content_name:a.textContent.trim()});
+  if(!a) return;
+  if(window.fbq) fbq('track','InitiateCheckout',{content_name:a.textContent.trim()});
+  if(window.gtag) gtag('event','click_book_now',{
+    event_category:'engagement',
+    event_label:a.textContent.trim(),
+    page_location:location.hash||'#/home'
+  });
 });
 
 // ---------- room photo carousels ----------
