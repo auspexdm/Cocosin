@@ -113,6 +113,11 @@ def page_head(key):
     h = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{html.escape(title)}">', h)
     h = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{html.escape(desc)}">', h)
     h = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', h)
+    if key == "home":
+        faqs = json.load(open(os.path.join(ROOT, "src", "faqs-home.json"), encoding="utf-8"))
+        faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+        h = h.replace("</title>", "</title>\n<script type=\"application/ld+json\">" + json.dumps(faq, ensure_ascii=False) + "</script>", 1)
     if key != "home":  # Resort schema lives on the home page; inner pages get breadcrumbs
         h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', "", h, count=1, flags=re.S)
         crumb = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
