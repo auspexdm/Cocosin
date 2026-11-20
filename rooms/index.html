@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rooms &amp; Suites near Kashid Beach | Coco&#x27;s Inn Resort, Alibaug</title>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cocosinn.com/"}, {"@type": "ListItem", "position": 2, "name": "Rooms & Suites near Kashid Beach", "item": "https://www.cocosinn.com/rooms/"}]}</script>
+
 <meta name="description" content="Sea view rooms and suites at Coco&#x27;s Inn Resort, 2.6 km from Kashid Beach. Ideal for families, couples and groups. Book direct for the best rates.">
 <link rel="canonical" href="https://www.cocosinn.com/rooms/">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -66,6 +67,8 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;padding:14px 0;background:rgba
 .navlinks a{padding:10px 14px;border-radius:99px;font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--ink-2);transition:.25s}
 .navlinks a:hover{background:#efefef;color:var(--ink)}
 .navlinks a.active{background:var(--ink);color:#fff}
+.navlinks a,.nav .btn{white-space:nowrap}
+@media(max-width:1360px){.navlinks{gap:2px}.navlinks a{padding:8px 9px;font-size:13px;letter-spacing:.02em}}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:99px;background:var(--lime);color:var(--ink);font-weight:700;font-size:14px;letter-spacing:.06em;border:none;cursor:pointer;transition:.28s;box-shadow:0 10px 26px -12px rgba(140,198,62,.8)}
 .btn:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
 .btn.ghost{background:transparent;border:1.6px solid rgba(255,255,255,.65);color:#fff;box-shadow:none}
@@ -305,6 +308,21 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 @media(max-width:560px){.bk-grid{grid-template-columns:1fr}.bk-body,.bk-head{padding:22px}}
 
 /* ---------- pages (router) ---------- */
+.jr-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
+.jr-card{text-decoration:none;color:inherit}
+.post{max-width:760px;margin:0 auto}
+.post p,.post li{color:var(--ink-2);font-size:16.5px;line-height:1.75}
+.post h2{font-size:clamp(1.5rem,2.6vw,2rem);margin:44px 0 14px}
+.post ul,.post ol{padding-left:22px;margin:10px 0}
+.post li{margin:6px 0}
+.post a{color:var(--palm);text-decoration:underline}
+.post table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
+.post th,.post td{border-bottom:1px solid var(--sand-2);padding:10px 8px;text-align:left}
+.post th{font-weight:700;color:var(--ink)}
+.post figure{margin:28px 0}.post figure img{width:100%;border-radius:var(--radius)}
+.post .post-meta{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:18px}
+.post .faq h3{font-size:1.15rem;margin:22px 0 6px}
+.post .cta-box{background:var(--sand);border-radius:var(--radius);padding:30px;margin-top:44px;text-align:center}
 .page{display:none}
 .page.current{display:block}
 
@@ -324,6 +342,7 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 
  .f-grid{grid-template-columns:1fr}
 }
+@media(max-width:1180px){.navlinks,.nav .btn{display:none}.burger{display:block}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LSQSN0VGB"></script>
@@ -370,6 +389,7 @@ src="https://www.facebook.com/tr?id=2267866783961992&ev=PageView&noscript=1"
       <li><a href="/things-to-do/" data-nav="things">Things To Do</a></li>
       <li><a href="/how-to-reach/" data-nav="reach">How to Reach</a></li>
       <li><a href="/gallery/" data-nav="gallery">Gallery</a></li>
+      <li><a href="/journal/" data-nav="journal">Journal</a></li>
       <li><a href="/about/" data-nav="about">About Us</a></li>
       <li><a href="/contact/" data-nav="contact">Contact</a></li>
     </ul>
@@ -381,7 +401,7 @@ src="https://www.facebook.com/tr?id=2267866783961992&ev=PageView&noscript=1"
 <nav class="mobile-menu" id="mm" aria-label="Mobile navigation">
   <button class="close-m" aria-label="Close menu" onclick="document.getElementById('mm').classList.remove('open')">&times;</button>
   <a href="/">Home</a><a href="/rooms/">Our Rooms</a><a href="/dining/">Dining</a>
-  <a href="/events/">Events</a><a href="/things-to-do/">Things To Do</a><a href="/how-to-reach/">How to Reach</a><a href="/gallery/">Gallery</a><a href="/about/">About Us</a><a href="/contact/">Contact</a>
+  <a href="/events/">Events</a><a href="/things-to-do/">Things To Do</a><a href="/how-to-reach/">How to Reach</a><a href="/gallery/">Gallery</a><a href="/journal/">Journal</a><a href="/about/">About Us</a><a href="/contact/">Contact</a>
   <a class="btn" style="margin-top:18px" target="_blank" rel="noopener" href="https://bookingengine.stayflexi.com/?hotel_id=30260">Book Now</a>
 </nav>
 
@@ -464,6 +484,7 @@ src="https://www.facebook.com/tr?id=2267866783961992&ev=PageView&noscript=1"
           <li><a href="/things-to-do/">Things To Do</a></li>
           <li><a href="/how-to-reach/">How to Reach</a></li>
           <li><a href="/gallery/">Gallery</a></li>
+          <li><a href="/journal/">Journal</a></li>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
@@ -549,13 +570,13 @@ src="https://www.facebook.com/tr?id=2267866783961992&ev=PageView&noscript=1"
 
 <script>
 // ---------- multi-page nav (replaces old hash router) ----------
-const pages=["home", "rooms", "dining", "events", "things", "reach", "gallery", "about", "contact"];
-const PATHS={"home": "/", "rooms": "/rooms/", "dining": "/dining/", "events": "/events/", "things": "/things-to-do/", "reach": "/how-to-reach/", "gallery": "/gallery/", "about": "/about/", "contact": "/contact/"};
+const pages=["home", "rooms", "dining", "events", "things", "reach", "gallery", "about", "journal", "journal-kashid", "contact"];
+const PATHS={"home": "/", "rooms": "/rooms/", "dining": "/dining/", "events": "/events/", "things": "/things-to-do/", "reach": "/how-to-reach/", "gallery": "/gallery/", "about": "/about/", "journal": "/journal/", "journal-kashid": "/journal/kashid-beach-family-trip-guide/", "contact": "/contact/"};
 const CURRENT=document.body.dataset.page||'home';
 // old #/section links still work: send them to the real page
 (function(){const h=(location.hash||'').replace('#/','');if(h&&PATHS[h]&&PATHS[h]!==location.pathname)location.replace(PATHS[h]);})();
 function route(){
-  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===CURRENT));
+  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===CURRENT.split('-')[0]));
   reveal();
 }
 if(window.fbq&&['rooms','dining','events'].includes(CURRENT)) fbq('track','ViewContent',{content_name:CURRENT});

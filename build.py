@@ -33,6 +33,10 @@ PAGES = {
                 "See Coco's Inn Resort near Kashid Beach — aerial views, pools, rooms, dining and Konkan sunsets."),
     "about": ("/about/", "About Coco's Inn Resort — Coastal Retreat near Kashid, Alibaug",
               "Coco's Inn Resort is a coastal retreat near Kashid Beach, Alibaug, with ocean views, modern amenities and warm Konkan hospitality."),
+    "journal": ("/journal/", "Journal — Kashid & Alibaug Travel Guides | Coco's Inn Resort",
+                "Travel guides and local tips for Kashid Beach and Alibaug from Coco's Inn Resort: family trips, day trips, food and where to stay."),
+    "journal-kashid": ("/journal/kashid-beach-family-trip-guide/", "Kashid Beach Family Trip Guide: Stay, Eat & Things to Do",
+                       "Planning a family trip to Kashid Beach? Where to stay 2.6 km from the beach, where to eat, and day trips to Murud-Janjira and Phansad."),
     "contact": ("/contact/", "Contact & Booking | Coco's Inn Resort, Kashid Beach",
                 "Call or WhatsApp +91 91675 62668 to book Coco's Inn Resort, Barshive, near Kashid Beach, Tal. Murud, Raigad 402202."),
 }
@@ -67,7 +71,7 @@ main_end = body.index("</main>")
 before_main, main_html, after_main = body[:main_start], body[main_start:main_end], body[main_end:]
 
 # page blocks
-starts = [(m.start(), m.group(1)) for m in re.finditer(r'<div class="page" id="pg-([a-z]+)">', main_html)]
+starts = [(m.start(), m.group(1)) for m in re.finditer(r'<div class="page" id="pg-([a-z-]+)">', main_html)]
 blocks = {}
 for i, (pos, key) in enumerate(starts):
     end = starts[i + 1][0] if i + 1 < len(starts) else len(main_html)
@@ -89,7 +93,7 @@ const CURRENT=document.body.dataset.page||'home';
 // old #/section links still work: send them to the real page
 (function(){const h=(location.hash||'').replace('#/','');if(h&&PATHS[h]&&PATHS[h]!==location.pathname)location.replace(PATHS[h]);})();
 function route(){
-  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===CURRENT));
+  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===CURRENT.split('-')[0]));
   reveal();
 }
 if(window.fbq&&['rooms','dining','events'].includes(CURRENT)) fbq('track','ViewContent',{content_name:CURRENT});""" % (
@@ -114,7 +118,16 @@ def page_head(key):
         crumb = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": title.split("|")[0].split("—")[0].strip(), "item": url}]}
-        h = h.replace("</title>", "</title>\n<script type=\"application/ld+json\">" + json.dumps(crumb) + "</script>", 1)
+        extra = [crumb]
+        if key.startswith("journal-"):
+            crumb["itemListElement"].insert(1, {"@type": "ListItem", "position": 2, "name": "Journal", "item": BASE + "/journal/"})
+            crumb["itemListElement"][2]["position"] = 3
+            extra.append({"@context": "https://schema.org", "@type": "BlogPosting", "headline": title, "description": desc,
+                          "image": BASE + "/assets/img/15a1587e6f95.webp", "datePublished": "2026-11-20", "dateModified": "2026-11-20",
+                          "inLanguage": "en-IN", "author": {"@type": "Organization", "name": "Coco's Inn Resort"},
+                          "publisher": {"@type": "Organization", "name": "Coco's Inn Resort", "url": BASE + "/"},
+                          "mainEntityOfPage": url})
+        h = h.replace("</title>", "</title>\n" + "".join("<script type=\"application/ld+json\">" + json.dumps(x, ensure_ascii=False) + "</script>\n" for x in extra), 1)
     return h
 
 def page_block(key):
