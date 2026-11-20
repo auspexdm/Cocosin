@@ -12,3 +12,11 @@
 
 ## Website
 - [Home](https://www.cocosinn.com/)
+- [Rooms & Suites](https://www.cocosinn.com/rooms/)
+- [Dining](https://www.cocosinn.com/dining/)
+- [Weddings & Events](https://www.cocosinn.com/events/)
+- [Things to Do near Kashid](https://www.cocosinn.com/things-to-do/)
+- [How to Reach](https://www.cocosinn.com/how-to-reach/)
+- [Gallery](https://www.cocosinn.com/gallery/)
+- [About](https://www.cocosinn.com/about/)
+- [Contact & Booking](https://www.cocosinn.com/contact/)

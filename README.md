@@ -149,3 +149,12 @@ For production (post-approval), recommended path: split into a proper multi-page
 ---
 
 *Source content © Coco's Inn Resort by Spicy Mango. Design draft by Auspex Digital Marketing.*
+
+---
+
+## Multi-page build (Nov 2026)
+
+`src/site.html` is the single-file source. Run `python3 build.py` after editing it — this writes one
+crawlable page per section (`/`, `/rooms/`, `/dining/`, `/events/`, `/things-to-do/`, `/how-to-reach/`,
+`/gallery/`, `/about/`, `/contact/`), extracts inline images into `assets/img/`, and regenerates `sitemap.xml`.
+Commit the generated files. Old `#/section` links redirect to the new pages automatically.

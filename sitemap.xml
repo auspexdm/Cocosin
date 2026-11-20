@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.cocosinn.com/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.cocosinn.com/</loc><lastmod>2026-11-20</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.cocosinn.com/rooms/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.cocosinn.com/dining/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.cocosinn.com/events/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.cocosinn.com/things-to-do/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.cocosinn.com/how-to-reach/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.cocosinn.com/gallery/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.cocosinn.com/about/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.cocosinn.com/contact/</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
 </urlset>
