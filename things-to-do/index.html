@@ -586,6 +586,7 @@ function toggleBudget(p){
 }
 function deliver(channel,subject,msg){
   if(window.fbq) fbq('track','Lead');
+  if(window.gtag) gtag('event','generate_lead',{method:channel==='wa'?'whatsapp':'email',form_name:'enquiry_form',page_location:location.pathname});
   if(channel==='wa') window.open('https://wa.me/'+RESORT_WA+'?text='+encodeURIComponent(msg),'_blank');
   else window.location.href='mailto:'+RESORT_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(msg);
 }
@@ -663,6 +664,7 @@ function sendBook(channel){
     if(tab==='stay') fbq('track','InitiateCheckout',{content_name:g('bk-room').value});
     else fbq('track','Lead',{content_name:'event enquiry'});
   }
+  if(window.gtag) gtag('event','generate_lead',{method:channel==='wa'?'whatsapp':'email',form_name:tab==='stay'?'booking_modal_stay':'booking_modal_event',page_location:location.pathname});
   if(channel==='wa') window.open('https://wa.me/'+RESORT_WA+'?text='+encodeURIComponent(msg),'_blank');
   else window.location.href='mailto:'+RESORT_EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(msg);
 }
@@ -701,6 +703,34 @@ function galFilter(btn,cat){
     t.classList.toggle('g-hide', cat!=='All' && t.dataset.cat!==cat);
   });
 }
+
+// ---------- GA4 + Meta event tracking ----------
+function trk(name,params){ if(window.gtag) gtag('event',name,Object.assign({page_location:location.pathname},params||{})); }
+function where(el){
+  if(el.closest('#bk, .modal, [role="dialog"]')) return 'booking_modal';
+  if(el.closest('header, nav, #mm')) return 'header';
+  if(el.closest('footer')) return 'footer';
+  if(el.closest('.hero-banner, .hero-cta')) return 'hero';
+  return 'body';
+}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a'); if(!a) return;
+  const href=a.getAttribute('href')||'', label=(a.textContent||a.getAttribute('aria-label')||'').trim().slice(0,80);
+  if(href.includes('wa.me')){ trk('whatsapp_click',{link_text:label,placement:where(a)}); if(window.fbq) fbq('track','Contact',{content_name:'whatsapp'}); }
+  else if(href.startsWith('tel:')){ trk('phone_click',{phone_number:href.slice(4),placement:where(a)}); if(window.fbq) fbq('track','Contact',{content_name:'phone'}); }
+  else if(href.startsWith('mailto:')){ trk('email_click',{placement:where(a)}); }
+  else if(/instagram\.com|facebook\.com/.test(href)){ trk('social_click',{network:href.includes('instagram')?'instagram':'facebook',placement:where(a)}); }
+  else if(/google\.[^/]+\/maps|maps\.app\.goo\.gl|goo\.gl\/maps/.test(href)){ trk('directions_click',{placement:where(a)}); }
+  else if(/(tripadvisor|google\.[^/]+\/search|g\.page)/.test(href)){ trk('reviews_click',{link_text:label,placement:where(a)}); }
+  else if(/^#\/rooms$|\/rooms\/?$/.test(href)){ trk('explore_rooms',{link_text:label,placement:where(a)}); }
+},true);
+document.addEventListener('change',e=>{
+  const i=e.target;
+  if(i.matches && i.matches('input[type="date"]') && i.value) trk('select_dates',{field:i.id||'date',form_name:i.closest('#bk')?'booking_modal':'enquiry_form'});
+});
+window.addEventListener('hashchange',()=>{
+  if(window.gtag) gtag('event','page_view',{page_location:location.href,page_path:location.pathname+location.hash,page_title:document.title});
+});
 
 route();
 
