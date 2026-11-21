@@ -102,6 +102,46 @@ after_main = after_main.replace(ROUTER_OLD.group(0), ROUTER_NEW)
 after_main = after_main.replace("page_location:location.hash||'#/home'", "page_location:location.pathname")
 after_main = re.sub(r"\n\s*window\.addEventListener\('hashchange',\(\)=>\{l\.classList\.remove\('hide'\);setTimeout\(\(\)=>l\.classList\.add\('hide'\),450\)\}\);", "", after_main)
 
+# ---------- 3b. page-specific structured data (facts as shown on each page) ----------
+RESORT = {"@type": "Resort", "@id": BASE + "/#resort", "name": "Coco's Inn Resort", "url": BASE + "/",
+          "telephone": "+91-9167562668", "email": "admin@cocosinn.com",
+          "address": {"@type": "PostalAddress", "streetAddress": "Barshive, Near Kashid Beach, Tal. Murud",
+                      "addressLocality": "Kashid", "addressRegion": "Maharashtra", "postalCode": "402202", "addressCountry": "IN"}}
+ROOM_AMEN = ["Air conditioning", "Television", "Mini cooler", "Electric kettle", "Hair dryer", "Intercom", "Free Wi-Fi"]
+def room(name, desc, extra_amen=(), occ=None):
+    r = {"@type": "HotelRoom", "name": name, "description": desc, "containedInPlace": {"@id": BASE + "/#resort"},
+         "bed": {"@type": "BedDetails", "typeOfBed": "King", "numberOfBeds": 1},
+         "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": a, "value": True} for a in list(extra_amen) + ROOM_AMEN],
+         "potentialAction": {"@type": "ReserveAction", "target": "https://bookingengine.stayflexi.com/?hotel_id=30260"}}
+    if occ: r["occupancy"] = {"@type": "QuantitativeValue", "maxValue": occ}
+    return r
+def attraction(name, desc, km):
+    return {"@type": "TouristAttraction", "name": name, "description": desc + f" About {km} km from Coco's Inn Resort."}
+PAGE_SCHEMA = {
+    "rooms": [{"@context": "https://schema.org", "@type": "ItemList", "name": "Rooms at Coco's Inn Resort", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "item": r} for i, r in enumerate([
+            room("Sea View Premium Room · First Floor", "Spacious first-floor sea-facing room with a king bed, elevated views over the gardens and pool, and sea breezes.", ["First floor"]),
+            room("Sea View Premium Room", "Comfortable air-conditioned room with a king bed and views of the gardens and the coast."),
+            room("Duplex Family Sea View Room", "Signature split-level room with a king bed and a loft that sleeps two more adults; sleeps 4.", ["Loft"], 4)])]}],
+    "dining": [{"@context": "https://schema.org", "@type": "Restaurant", "name": "Coco's Inn Resort Restaurant",
+                "url": BASE + "/dining/", "servesCuisine": ["Kokani", "Konkan seafood", "Multi-cuisine"],
+                "telephone": "+91-9167562668", "address": RESORT["address"], "containedInPlace": {"@id": BASE + "/#resort"},
+                "description": "Multi-cuisine and Kokani dining with fresh coastal seafood. Signature dishes include Kokani Fish Curry, Chicken Sukka, Sol Kadhi and Bombil Fry.",
+                "acceptsReservations": True}],
+    "things": [{"@context": "https://schema.org", "@type": "ItemList", "name": "Things to do near Coco's Inn Resort, Kashid", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "item": a} for i, a in enumerate([
+            attraction("Kashid Beach", "Soft sands, shore walks and sea breeze.", 2.6),
+            attraction("Phansad Wildlife Sanctuary", "Dense forests and rich biodiversity, popular with birdwatchers and nature lovers.", 10),
+            attraction("Murud-Janjira Fort", "Island fort famous for remaining unconquered, reached by a scenic boat ride.", 15),
+            attraction("Korlai Fort & Lighthouse", "Cliff-top fort ruins and a lighthouse with sweeping Arabian Sea views.", 15),
+            attraction("Revdanda Fort", "Former Portuguese stronghold, now ruins overgrown with greenery, with ocean views.", 20),
+            attraction("Birla Mandir, Salav", "Marble temple dedicated to Lord Ganesh, with sea views and landscaped gardens.", 22)])]}],
+    "contact": [{"@context": "https://schema.org", "@type": "ContactPage", "url": BASE + "/contact/",
+                 "mainEntity": dict(RESORT, contactPoint=[
+                     {"@type": "ContactPoint", "telephone": "+91-9167562668", "contactType": "reservations", "areaServed": "IN", "availableLanguage": ["en", "hi", "mr"]},
+                     {"@type": "ContactPoint", "telephone": "+91-9167562468", "contactType": "reservations", "areaServed": "IN"}])}],
+}
+
 # ---------- 4. per-page head ----------
 def page_head(key):
     path, title, desc = PAGES[key]
@@ -132,6 +172,11 @@ def page_head(key):
                           "inLanguage": "en-IN", "author": {"@type": "Organization", "name": "Coco's Inn Resort"},
                           "publisher": {"@type": "Organization", "name": "Coco's Inn Resort", "url": BASE + "/"},
                           "mainEntityOfPage": url})
+        fq = os.path.join(ROOT, "src", f"faqs-{key}.json")
+        if os.path.exists(fq):
+            extra.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in json.load(open(fq, encoding="utf-8"))]})
+        extra += PAGE_SCHEMA.get(key, [])
         h = h.replace("</title>", "</title>\n" + "".join("<script type=\"application/ld+json\">" + json.dumps(x, ensure_ascii=False) + "</script>\n" for x in extra), 1)
     return h
 
