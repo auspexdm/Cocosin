@@ -102,6 +102,8 @@ after_main = after_main.replace(ROUTER_OLD.group(0), ROUTER_NEW)
 after_main = after_main.replace("page_location:location.hash||'#/home'", "page_location:location.pathname")
 after_main = re.sub(r"\n\s*window\.addEventListener\('hashchange',\(\)=>\{l\.classList\.remove\('hide'\);setTimeout\(\(\)=>l\.classList\.add\('hide'\),450\)\}\);", "", after_main)
 
+LASTMOD = {p: "2026-11-21" for p in ["/rooms/", "/dining/", "/things-to-do/", "/how-to-reach/", "/contact/"]}
+
 # ---------- 3b. page-specific structured data (facts as shown on each page) ----------
 RESORT = {"@type": "Resort", "@id": BASE + "/#resort", "name": "Coco's Inn Resort", "url": BASE + "/",
           "telephone": "+91-9167562668", "email": "admin@cocosinn.com",
@@ -200,7 +202,7 @@ for key, (path, *_ ) in PAGES.items():
 
 # ---------- 5. sitemap ----------
 urls = "\n".join(
-    f"  <url><loc>{BASE}{p}</loc><lastmod>2026-11-20</lastmod><priority>{'1.0' if p == '/' else '0.8'}</priority></url>"
+    f"  <url><loc>{BASE}{p}</loc><lastmod>{LASTMOD.get(p, '2026-11-20')}</lastmod><priority>{'1.0' if p == '/' else '0.8'}</priority></url>"
     for p, *_ in PAGES.values())
 open(os.path.join(ROOT, "sitemap.xml"), "w").write(
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "\n</urlset>\n")
